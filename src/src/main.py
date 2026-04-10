@@ -1,27 +1,33 @@
 import requests
 from bs4 import BeautifulSoup
-import random
 import os
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("TELEGRAM_CHANNEL_ID")
 
-def get_sample_firms():
-    return [
-        {"name": "Wealth Partners Group", "website": "https://example.com"},
-        {"name": "Alpha Advisors", "website": "https://example.com"},
-        {"name": "Summit Financial", "website": "https://example.com"}
-    ]
+FIRMS = [
+    {"name": "Creative Planning", "website": "https://creativeplanning.com"},
+    {"name": "Mariner Wealth Advisors", "website": "https://marinerwealthadvisors.com"},
+    {"name": "Mercer Advisors", "website": "https://merceradvisors.com"}
+]
+
+KEYWORDS = ["hiring", "join", "expanding", "webinar", "event", "partner"]
+
+def scrape_text(url):
+    try:
+        r = requests.get(url, timeout=10)
+        soup = BeautifulSoup(r.text, "html.parser")
+        return soup.get_text(" ", strip=True).lower()
+    except:
+        return ""
 
 def detect_signal(text):
-    keywords = ["hiring", "webinar", "expanding", "join", "partner"]
+    matches = [k for k in KEYWORDS if k in text]
 
-    matches = [k for k in keywords if k in text.lower()]
-
-    if len(matches) >= 2:
+    if len(matches) >= 3:
+        return "strong"
+    elif len(matches) >= 1:
         return "moderate"
-    elif len(matches) == 1:
-        return "weak"
     return None
 
 def send_telegram(msg):
@@ -29,15 +35,22 @@ def send_telegram(msg):
     requests.post(url, json={"chat_id": CHAT_ID, "text": msg})
 
 def run():
-    firms = get_sample_firms()
+    for firm in FIRMS:
+        text = scrape_text(firm["website"])
 
-    for firm in firms:
-        text = "We are hiring and expanding our team"  # fake signal for now
+        if not text:
+            continue
 
         signal = detect_signal(text)
 
         if signal:
-            msg = f"🚀 RIA Lead\n\nFirm: {firm['name']}\nSignal: {signal}"
+            msg = f"""
+🚀 RIA Lead
+
+Firm: {firm['name']}
+Signal: {signal}
+Website: {firm['website']}
+"""
             send_telegram(msg)
 
 if __name__ == "__main__":
