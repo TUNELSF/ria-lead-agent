@@ -16,17 +16,14 @@ HEADERS = {
 
 REQUEST_TIMEOUT = 20
 
-DAILY_TIER1_LIMIT = 60
-DAILY_TIER2_LIMIT = 40
+DAILY_TIER1_LIMIT = 10
+DAILY_TIER2_LIMIT = 5
 
 CONTENT_PATHS = [
     "/",
     "/news",
-    "/press",
-    "/blog",
     "/insights",
-    "/media",
-    "/resources",
+    "/blog",
     "/events",
 ]
 
@@ -36,6 +33,7 @@ TEAM_PATHS = [
     "/leadership",
     "/about",
     "/about-us",
+    "/management",
 ]
 
 HIGH_SIGNAL_PATTERNS = [
@@ -62,6 +60,9 @@ CONTACT_TITLE_PATTERNS = [
     r"president",
     r"managing partner",
     r"founder",
+    r"chief compliance officer",
+    r"\bcco\b",
+    r"partner",
 ]
 
 def clean_str(value):
@@ -95,6 +96,23 @@ def html_to_text(html):
         tag.decompose()
     return soup.get_text(" ", strip=True)
 
+def clean_text(text):
+    return re.sub(r"\s+", " ", clean_str(text)).strip()
+
+def sentence_snippet(text, pattern):
+    text = clean_text(text)
+    if not text:
+        return ""
+
+    match = re.search(pattern, text, flags=re.IGNORECASE)
+    if not match:
+        return text[:220]
+
+    start = max(0, match.start() - 120)
+    end = min(len(text), match.end() + 120)
+    snippet = text[start:end].strip()
+    return snippet[:300]
+
 def find_latest_sec_download():
     print("Fetching SEC listing page...")
     r = fetch(SEC_PAGE_URL)
@@ -117,10 +135,6 @@ def find_latest_sec_download():
     if not candidates:
         raise RuntimeError("Could not find a Registered Investment Advisers download link on the SEC page.")
 
-    print("Found SEC candidates:")
-    for _, url in candidates[:5]:
-        print(" -", url)
-
     return candidates[0][1]
 
 def load_dataframe_from_sec_file(file_url):
@@ -138,10 +152,7 @@ def load_dataframe_from_sec_file(file_url):
 
     if lower.endswith(".zip"):
         z = zipfile.ZipFile(io.BytesIO(r.content))
-        names = z.namelist()
-        print("Files inside ZIP:", names[:10])
-
-        for name in names:
+        for name in z.namelist():
             lname = name.lower()
             if lname.endswith(".csv"):
                 with z.open(name) as f:
@@ -165,9 +176,6 @@ def choose_column(df, options, required=True):
 def load_sec_universe():
     file_url = find_latest_sec_download()
     df = load_dataframe_from_sec_file(file_url)
-
-    print(f"SEC dataframe shape: {df.shape}")
-    print("First 20 columns:", list(df.columns[:20]))
 
     firm_col = choose_column(df, [
         "Primary Business Name",
@@ -214,7 +222,6 @@ def score_firm(row):
     if any(x in name for x in ["capital", "partners", "wealth", "advisors"]):
         score += 1
 
-    # crude AUM boost
     digits = re.sub(r"\D", "", aum)
     if len(digits) >= 9:
         score += 3
@@ -233,15 +240,35 @@ def detect_signal(pages):
         text = page["text"]
         for p in HIGH_SIGNAL_PATTERNS:
             if re.search(p, text, re.IGNORECASE):
-                return {"priority": "high", "source": page["url"]}
+                return {
+                    "priority": "high",
+                    "source": page["url"],
+                    "trigger": "Explicit crypto-related language found on a public page",
+                    "evidence": sentence_snippet(text, p)
+                }
 
     for page in pages:
         text = page["text"]
         for p in MEDIUM_SIGNAL_PATTERNS:
             if re.search(p, text, re.IGNORECASE):
-                return {"priority": "medium", "source": page["url"]}
+                return {
+                    "priority": "medium",
+                    "source": page["url"],
+                    "trigger": "Adjacent alternatives language found on a public page",
+                    "evidence": sentence_snippet(text, p)
+                }
 
     return None
+
+def looks_like_name(text):
+    text = clean_text(text)
+    words = text.split()
+    if len(words) < 2 or len(words) > 4:
+        return False
+    for w in words:
+        if not re.match(r"^[A-Z][a-zA-Z\-\']+$", w):
+            return False
+    return True
 
 def extract_contacts(html):
     soup = BeautifulSoup(html, "html.parser")
@@ -251,12 +278,40 @@ def extract_contacts(html):
     for i, line in enumerate(texts):
         ll = line.lower()
         if any(re.search(p, ll) for p in CONTACT_TITLE_PATTERNS):
-            if i > 0:
-                name = texts[i - 1].strip()
-                if 1 < len(name.split()) <= 4:
-                    contacts.append((name, line))
+            # look up to 3 lines back for a likely name
+            for j in range(max(0, i - 3), i):
+                candidate = texts[j].strip()
+                if looks_like_name(candidate):
+                    contacts.append((candidate, line))
+                    break
 
-    return contacts[:2]
+    deduped = []
+    seen = set()
+    for name, title in contacts:
+        key = (name.lower(), title.lower())
+        if key not in seen:
+            seen.add(key)
+            deduped.append((name, title))
+
+    # dedupe by name only as second pass
+    final_contacts = []
+    seen_names = set()
+    for name, title in deduped:
+        if name.lower() not in seen_names:
+            seen_names.add(name.lower())
+            final_contacts.append((name, title))
+
+    return final_contacts[:2]
+
+def build_hook(signal):
+    if signal["priority"] == "high":
+        return "Saw the crypto-related language on your public materials — curious how you're thinking about digital asset access and implementation for clients."
+    return "Noticed the alternatives language — curious whether digital assets are starting to enter those portfolio conversations."
+
+def build_why_now(signal):
+    if signal["priority"] == "high":
+        return "This is explicit crypto or digital-asset language on a current public page, which makes it a strong live signal."
+    return "This is a fresh adjacent signal, though it is not yet explicit crypto language."
 
 def run():
     df = load_sec_universe()
@@ -305,16 +360,22 @@ def run():
                     break
 
         contact_lines = [f"{name} — {title}" for name, title in contacts]
+        if len(contact_lines) == 1:
+            contact_lines.append("Chief Investment Officer")
         if not contact_lines:
             contact_lines = ["Chief Investment Officer", "Managing Partner"]
 
         output = (
             f"\n{'🔥 HIGH PRIORITY' if signal['priority']=='high' else '🟡 MEDIUM PRIORITY'}\n\n"
             f"{firm['firm_name']}\n"
+            f"Trigger: {signal['trigger']}\n"
+            f"Why now: {build_why_now(signal)}\n"
             f"Source: {signal['source']}\n"
+            f"Evidence: {signal['evidence']}\n"
+            f"Hook: {build_hook(signal)}\n"
             f"Potential contacts:\n"
             f"- {contact_lines[0]}\n"
-            f"- {contact_lines[1] if len(contact_lines) > 1 else contact_lines[0]}\n"
+            f"- {contact_lines[1]}\n"
         )
 
         if signal["priority"] == "high":
