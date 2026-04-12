@@ -82,17 +82,52 @@ def html_to_text(html):
 
 def get_sec_data():
     r = fetch(SEC_PAGE_URL)
+    if r is None:
+        raise Exception("Could not fetch SEC page")
+
+    r.raise_for_status()
     soup = BeautifulSoup(r.text, "html.parser")
 
+    candidates = []
+
     for a in soup.find_all("a", href=True):
-        href = a["href"]
-        if "investment advisers" in a.text.lower() and href.endswith(".zip"):
-            url = "https://www.sec.gov" + href
-            z = zipfile.ZipFile(io.BytesIO(fetch(url).content))
-            for f in z.namelist():
-                if f.endswith(".csv"):
-                    return pd.read_csv(z.open(f), encoding="latin1", low_memory=False)
-    raise Exception("SEC file not found")
+        text = clean(a.get_text(" ", strip=True)).lower()
+        href = clean(a["href"])
+
+        if "registered investment advisers" not in text:
+            continue
+
+        full_url = urljoin("https://www.sec.gov", href)
+
+        if full_url.lower().endswith(".zip"):
+            candidates.append(full_url)
+
+    if not candidates:
+        raise Exception("SEC file not found")
+
+    # SEC page lists newest first
+    sec_zip_url = candidates[0]
+    print("Using SEC ZIP:", sec_zip_url)
+
+    zip_response = fetch(sec_zip_url)
+    if zip_response is None:
+        raise Exception("Could not download SEC ZIP")
+
+    zip_response.raise_for_status()
+    z = zipfile.ZipFile(io.BytesIO(zip_response.content))
+
+    for filename in z.namelist():
+        lower_name = filename.lower()
+
+        if lower_name.endswith(".csv"):
+            with z.open(filename) as f:
+                return pd.read_csv(f, encoding="latin1", low_memory=False)
+
+        if lower_name.endswith(".xlsx"):
+            with z.open(filename) as f:
+                return pd.read_excel(f)
+
+    raise Exception("No CSV or XLSX found inside SEC ZIP")
 
 def load_universe():
     df = get_sec_data()
