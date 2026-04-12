@@ -1,4 +1,3 @@
-import os
 import re
 import random
 import requests
@@ -7,18 +6,15 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import zipfile
 import io
+import traceback
 
-# =========================
-# CONFIG
-# =========================
-
-SEC_URL = "https://www.sec.gov/data-research/sec-markets-data/information-about-registered-investment-advisers-exempt-reporting-advisers"
+SEC_PAGE_URL = "https://www.sec.gov/data-research/sec-markets-data/information-about-registered-investment-advisers-exempt-reporting-advisers"
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; RIA-Crypto-Scout/1.0)"
+    "User-Agent": "Mozilla/5.0 (compatible; RIA-Crypto-Scout/1.0; +https://www.sec.gov/)"
 }
 
-REQUEST_TIMEOUT = 12
+REQUEST_TIMEOUT = 20
 
 DAILY_TIER1_LIMIT = 60
 DAILY_TIER2_LIMIT = 40
@@ -44,7 +40,9 @@ TEAM_PATHS = [
 
 HIGH_SIGNAL_PATTERNS = [
     r"\bcrypto\b",
-    r"\bdigital asset",
+    r"\bcryptocurrency\b",
+    r"\bdigital asset\b",
+    r"\bdigital assets\b",
     r"\bbitcoin\b",
     r"\bethereum\b",
     r"\bblockchain\b",
@@ -66,93 +64,159 @@ CONTACT_TITLE_PATTERNS = [
     r"founder",
 ]
 
-# =========================
-# SEC DOWNLOAD
-# =========================
+def clean_str(value):
+    if pd.isna(value):
+        return ""
+    return str(value).strip()
 
-def download_latest_sec_file():
-    print("Fetching SEC page...")
+def ensure_url(url):
+    url = clean_str(url)
+    if not url:
+        return ""
+    if not url.startswith("http://") and not url.startswith("https://"):
+        return "https://" + url
+    return url
 
-    resp = requests.get(SEC_URL, headers=HEADERS)
-    soup = BeautifulSoup(resp.text, "html.parser")
+def fetch(url):
+    return requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT, allow_redirects=True)
 
-    links = soup.find_all("a", href=True)
+def fetch_html(url):
+    try:
+        r = fetch(url)
+        if r.status_code == 200 and "text/html" in r.headers.get("content-type", "").lower():
+            return r.text
+    except Exception:
+        pass
+    return None
 
-    zip_links = []
-    for link in links:
-        href = link["href"]
-        text = link.get_text().lower()
+def html_to_text(html):
+    soup = BeautifulSoup(html, "html.parser")
+    for tag in soup(["script", "style", "noscript"]):
+        tag.decompose()
+    return soup.get_text(" ", strip=True)
 
-        if "registered investment advisers" in text and ".zip" in href:
-            zip_links.append(href)
+def find_latest_sec_download():
+    print("Fetching SEC listing page...")
+    r = fetch(SEC_PAGE_URL)
+    r.raise_for_status()
 
-    if not zip_links:
-        raise Exception("No SEC ZIP file found")
+    soup = BeautifulSoup(r.text, "html.parser")
+    candidates = []
 
-    latest_link = zip_links[0]
+    for a in soup.find_all("a", href=True):
+        href = a["href"].strip()
+        text = a.get_text(" ", strip=True).lower()
 
-    if not latest_link.startswith("http"):
-        latest_link = "https://www.sec.gov" + latest_link
+        if "registered investment advisers" not in text:
+            continue
 
-    print(f"Downloading SEC file: {latest_link}")
+        full_url = urljoin("https://www.sec.gov", href)
+        if any(full_url.lower().endswith(ext) for ext in [".zip", ".xlsx", ".csv"]):
+            candidates.append((text, full_url))
 
-    file_resp = requests.get(latest_link, headers=HEADERS)
-    z = zipfile.ZipFile(io.BytesIO(file_resp.content))
+    if not candidates:
+        raise RuntimeError("Could not find a Registered Investment Advisers download link on the SEC page.")
 
-    for name in z.namelist():
-        if name.endswith(".csv"):
-            with z.open(name) as f:
-                return pd.read_csv(f, encoding="latin1", low_memory=False)
+    print("Found SEC candidates:")
+    for _, url in candidates[:5]:
+        print(" -", url)
 
-        if name.endswith(".xlsx"):
-            with z.open(name) as f:
-                return pd.read_excel(f)
+    return candidates[0][1]
 
-    raise Exception("No usable file found inside ZIP")
+def load_dataframe_from_sec_file(file_url):
+    print(f"Downloading SEC file: {file_url}")
+    r = fetch(file_url)
+    r.raise_for_status()
 
-# =========================
-# LOAD + CLEAN
-# =========================
+    lower = file_url.lower()
+
+    if lower.endswith(".csv"):
+        return pd.read_csv(io.BytesIO(r.content), encoding="latin1", low_memory=False)
+
+    if lower.endswith(".xlsx"):
+        return pd.read_excel(io.BytesIO(r.content))
+
+    if lower.endswith(".zip"):
+        z = zipfile.ZipFile(io.BytesIO(r.content))
+        names = z.namelist()
+        print("Files inside ZIP:", names[:10])
+
+        for name in names:
+            lname = name.lower()
+            if lname.endswith(".csv"):
+                with z.open(name) as f:
+                    return pd.read_csv(f, encoding="latin1", low_memory=False)
+            if lname.endswith(".xlsx"):
+                with z.open(name) as f:
+                    return pd.read_excel(f)
+
+        raise RuntimeError("ZIP downloaded from SEC did not contain a CSV or XLSX file.")
+
+    raise RuntimeError(f"Unsupported SEC file type: {file_url}")
+
+def choose_column(df, options, required=True):
+    for col in options:
+        if col in df.columns:
+            return col
+    if required:
+        raise RuntimeError(f"Missing expected column. Tried: {options}. Actual columns start with: {list(df.columns[:20])}")
+    return None
 
 def load_sec_universe():
-    df = download_latest_sec_file()
+    file_url = find_latest_sec_download()
+    df = load_dataframe_from_sec_file(file_url)
 
-    rename_map = {
-        "Primary Business Name": "firm_name",
-        "Website Address": "website",
-        "5F(2)(c)": "aum"
-    }
+    print(f"SEC dataframe shape: {df.shape}")
+    print("First 20 columns:", list(df.columns[:20]))
 
-    for old, new in rename_map.items():
-        if old in df.columns:
-            df = df.rename(columns={old: new})
+    firm_col = choose_column(df, [
+        "Primary Business Name",
+        "Legal Name",
+        "Firm Name",
+        "Business Name",
+    ])
 
-    df["firm_name"] = df["firm_name"].fillna("").astype(str)
-    df["website"] = df["website"].fillna("").astype(str)
+    website_col = choose_column(df, [
+        "Website Address",
+        "Website",
+        "Web Address",
+    ])
 
-    df = df[df["firm_name"] != ""]
-    df = df[df["website"] != ""]
+    aum_col = choose_column(df, [
+        "5F(2)(c)",
+        "AUM",
+        "RAUM",
+        "Regulatory Assets Under Management",
+    ], required=False)
 
-    return df
+    out = pd.DataFrame()
+    out["firm_name"] = df[firm_col].apply(clean_str)
+    out["website"] = df[website_col].apply(clean_str).apply(ensure_url)
+    out["aum"] = df[aum_col].apply(clean_str) if aum_col else ""
 
-# =========================
-# SCORING (OPTION B)
-# =========================
+    out = out[out["firm_name"] != ""].copy()
+    out = out[out["website"] != ""].copy()
+    out = out.drop_duplicates(subset=["firm_name", "website"]).copy()
+
+    print(f"Scannable firms after cleanup: {len(out)}")
+    return out
 
 def score_firm(row):
     score = 0
 
     website = row["website"]
     name = row["firm_name"].lower()
+    aum = clean_str(row.get("aum", ""))
 
-    if website.startswith("http"):
+    if website.startswith("http://") or website.startswith("https://"):
         score += 3
 
-    if any(x in name for x in ["capital", "partners", "wealth"]):
+    if any(x in name for x in ["capital", "partners", "wealth", "advisors"]):
         score += 1
 
-    aum = str(row.get("aum", ""))
-    if any(x in aum for x in ["000000000"]):  # crude large AUM signal
+    # crude AUM boost
+    digits = re.sub(r"\D", "", aum)
+    if len(digits) >= 9:
         score += 3
 
     return score
@@ -164,114 +228,70 @@ def assign_tier(score):
         return "tier2"
     return "skip"
 
-# =========================
-# SCRAPING
-# =========================
-
-def fetch_html(url):
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
-        if r.status_code == 200:
-            return r.text
-    except:
-        pass
-    return None
-
-def html_to_text(html):
-    soup = BeautifulSoup(html, "html.parser")
-    return soup.get_text(" ", strip=True)
-
-# =========================
-# SIGNAL DETECTION
-# =========================
-
 def detect_signal(pages):
     for page in pages:
         text = page["text"]
-
         for p in HIGH_SIGNAL_PATTERNS:
             if re.search(p, text, re.IGNORECASE):
-                return {
-                    "priority": "high",
-                    "source": page["url"]
-                }
+                return {"priority": "high", "source": page["url"]}
 
     for page in pages:
         text = page["text"]
-
         for p in MEDIUM_SIGNAL_PATTERNS:
             if re.search(p, text, re.IGNORECASE):
-                return {
-                    "priority": "medium",
-                    "source": page["url"]
-                }
+                return {"priority": "medium", "source": page["url"]}
 
     return None
 
-# =========================
-# CONTACT EXTRACTION
-# =========================
-
 def extract_contacts(html):
     soup = BeautifulSoup(html, "html.parser")
-    texts = soup.get_text("\n").split("\n")
-
+    texts = [t.strip() for t in soup.get_text("\n").split("\n") if t.strip()]
     contacts = []
 
     for i, line in enumerate(texts):
-        line = line.strip()
-
-        if any(re.search(p, line.lower()) for p in CONTACT_TITLE_PATTERNS):
+        ll = line.lower()
+        if any(re.search(p, ll) for p in CONTACT_TITLE_PATTERNS):
             if i > 0:
                 name = texts[i - 1].strip()
-                if len(name.split()) <= 4:
+                if 1 < len(name.split()) <= 4:
                     contacts.append((name, line))
 
     return contacts[:2]
 
-# =========================
-# MAIN
-# =========================
-
 def run():
-    print("Loading SEC data...")
     df = load_sec_universe()
-
-    print(f"{len(df)} firms loaded")
 
     df["score"] = df.apply(score_firm, axis=1)
     df["tier"] = df["score"].apply(assign_tier)
 
-    tier1 = df[df["tier"] == "tier1"]
-    tier2 = df[df["tier"] == "tier2"]
+    tier1 = df[df["tier"] == "tier1"].copy()
+    tier2 = df[df["tier"] == "tier2"].copy()
 
     batch = list(tier1.head(DAILY_TIER1_LIMIT).to_dict("records"))
-
     tier2_list = tier2.to_dict("records")
     random.shuffle(tier2_list)
     batch += tier2_list[:DAILY_TIER2_LIMIT]
 
-    print(f"Scanning {len(batch)} firms...")
+    print(f"Tier1: {len(tier1)} | Tier2: {len(tier2)} | Batch: {len(batch)}")
 
     high = []
     medium = []
 
-    for firm in batch:
+    for idx, firm in enumerate(batch, start=1):
         website = firm["website"]
+        print(f"[{idx}/{len(batch)}] {firm['firm_name']} -> {website}")
 
         pages = []
-
         for path in CONTENT_PATHS:
             url = urljoin(website, path)
             html = fetch_html(url)
             if html:
-                pages.append({
-                    "url": url,
-                    "text": html_to_text(html)
-                })
+                pages.append({"url": url, "text": html_to_text(html)})
+
+        if not pages:
+            continue
 
         signal = detect_signal(pages)
-
         if not signal:
             continue
 
@@ -284,22 +304,18 @@ def run():
                 if contacts:
                     break
 
-        contact_lines = []
-        for c in contacts:
-            contact_lines.append(f"{c[0]} — {c[1]}")
-
+        contact_lines = [f"{name} — {title}" for name, title in contacts]
         if not contact_lines:
             contact_lines = ["Chief Investment Officer", "Managing Partner"]
 
-        output = f"""
-{'🔥 HIGH PRIORITY' if signal['priority']=='high' else '🟡 MEDIUM PRIORITY'}
-
-{firm['firm_name']}
-Source: {signal['source']}
-Potential contacts:
-- {contact_lines[0]}
-- {contact_lines[1] if len(contact_lines)>1 else contact_lines[0]}
-"""
+        output = (
+            f"\n{'🔥 HIGH PRIORITY' if signal['priority']=='high' else '🟡 MEDIUM PRIORITY'}\n\n"
+            f"{firm['firm_name']}\n"
+            f"Source: {signal['source']}\n"
+            f"Potential contacts:\n"
+            f"- {contact_lines[0]}\n"
+            f"- {contact_lines[1] if len(contact_lines) > 1 else contact_lines[0]}\n"
+        )
 
         if signal["priority"] == "high":
             high.append(output)
@@ -307,15 +323,19 @@ Potential contacts:
             medium.append(output)
 
     print("\n🚀 RIA CRYPTO LEADS — PREVIEW\n")
-
-    for h in high[:10]:
-        print(h)
+    for item in high[:10]:
+        print(item)
         print("-----")
-
-    for m in medium[:10]:
-        print(m)
+    for item in medium[:10]:
+        print(item)
         print("-----")
-
 
 if __name__ == "__main__":
-    run()
+    try:
+        run()
+    except Exception as e:
+        print("\nSCRIPT FAILED\n")
+        print(type(e).__name__, ":", e)
+        print("\nFULL TRACEBACK:\n")
+        traceback.print_exc()
+        raise
