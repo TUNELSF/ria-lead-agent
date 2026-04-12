@@ -16,6 +16,7 @@ HEADERS = {
 
 REQUEST_TIMEOUT = 20
 
+# Keep these small while testing
 DAILY_TIER1_LIMIT = 10
 DAILY_TIER2_LIMIT = 5
 
@@ -65,6 +66,16 @@ CONTACT_TITLE_PATTERNS = [
     r"partner",
 ]
 
+BAD_WEBSITE_DOMAINS = [
+    "facebook.com",
+    "linkedin.com",
+    "instagram.com",
+    "twitter.com",
+    "x.com",
+    "youtube.com",
+    "youtu.be",
+]
+
 def clean_str(value):
     if pd.isna(value):
         return ""
@@ -74,17 +85,33 @@ def ensure_url(url):
     url = clean_str(url)
     if not url:
         return ""
-    if not url.startswith("http://") and not url.startswith("https://"):
-        return "https://" + url
-    return url
+
+    url = url.strip()
+
+    # If it already has a scheme, normalize scheme casing only
+    if re.match(r"^https?://", url, flags=re.IGNORECASE):
+        scheme, rest = url.split("://", 1)
+        return scheme.lower() + "://" + rest
+
+    return "https://" + url
+
+def is_bad_website(url):
+    url = clean_str(url).lower()
+    return any(domain in url for domain in BAD_WEBSITE_DOMAINS)
 
 def fetch(url):
-    return requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT, allow_redirects=True)
+    return requests.get(
+        url,
+        headers=HEADERS,
+        timeout=REQUEST_TIMEOUT,
+        allow_redirects=True,
+    )
 
 def fetch_html(url):
     try:
         r = fetch(url)
-        if r.status_code == 200 and "text/html" in r.headers.get("content-type", "").lower():
+        content_type = r.headers.get("content-type", "").lower()
+        if r.status_code == 200 and "text/html" in content_type:
             return r.text
     except Exception:
         pass
@@ -135,6 +162,7 @@ def find_latest_sec_download():
     if not candidates:
         raise RuntimeError("Could not find a Registered Investment Advisers download link on the SEC page.")
 
+    # First result on page is usually the newest
     return candidates[0][1]
 
 def load_dataframe_from_sec_file(file_url):
@@ -170,7 +198,10 @@ def choose_column(df, options, required=True):
         if col in df.columns:
             return col
     if required:
-        raise RuntimeError(f"Missing expected column. Tried: {options}. Actual columns start with: {list(df.columns[:20])}")
+        raise RuntimeError(
+            f"Missing expected column. Tried: {options}. "
+            f"Actual columns start with: {list(df.columns[:20])}"
+        )
     return None
 
 def load_sec_universe():
@@ -204,6 +235,7 @@ def load_sec_universe():
 
     out = out[out["firm_name"] != ""].copy()
     out = out[out["website"] != ""].copy()
+    out = out[~out["website"].apply(is_bad_website)].copy()
     out = out.drop_duplicates(subset=["firm_name", "website"]).copy()
 
     print(f"Scannable firms after cleanup: {len(out)}")
@@ -223,8 +255,10 @@ def score_firm(row):
         score += 1
 
     digits = re.sub(r"\D", "", aum)
-    if len(digits) >= 9:
-        score += 3
+    if len(digits) >= 10:
+        score += 2
+    if len(digits) >= 12:
+        score += 1
 
     return score
 
@@ -244,7 +278,7 @@ def detect_signal(pages):
                     "priority": "high",
                     "source": page["url"],
                     "trigger": "Explicit crypto-related language found on a public page",
-                    "evidence": sentence_snippet(text, p)
+                    "evidence": sentence_snippet(text, p),
                 }
 
     for page in pages:
@@ -255,7 +289,7 @@ def detect_signal(pages):
                     "priority": "medium",
                     "source": page["url"],
                     "trigger": "Adjacent alternatives language found on a public page",
-                    "evidence": sentence_snippet(text, p)
+                    "evidence": sentence_snippet(text, p),
                 }
 
     return None
@@ -265,9 +299,11 @@ def looks_like_name(text):
     words = text.split()
     if len(words) < 2 or len(words) > 4:
         return False
+
     for w in words:
         if not re.match(r"^[A-Z][a-zA-Z\-\']+$", w):
             return False
+
     return True
 
 def extract_contacts(html):
@@ -278,13 +314,13 @@ def extract_contacts(html):
     for i, line in enumerate(texts):
         ll = line.lower()
         if any(re.search(p, ll) for p in CONTACT_TITLE_PATTERNS):
-            # look up to 3 lines back for a likely name
             for j in range(max(0, i - 3), i):
                 candidate = texts[j].strip()
                 if looks_like_name(candidate):
                     contacts.append((candidate, line))
                     break
 
+    # Deduplicate exact name-title pairs
     deduped = []
     seen = set()
     for name, title in contacts:
@@ -293,7 +329,7 @@ def extract_contacts(html):
             seen.add(key)
             deduped.append((name, title))
 
-    # dedupe by name only as second pass
+    # Deduplicate by name only
     final_contacts = []
     seen_names = set()
     for name, title in deduped:
@@ -305,8 +341,14 @@ def extract_contacts(html):
 
 def build_hook(signal):
     if signal["priority"] == "high":
-        return "Saw the crypto-related language on your public materials — curious how you're thinking about digital asset access and implementation for clients."
-    return "Noticed the alternatives language — curious whether digital assets are starting to enter those portfolio conversations."
+        return (
+            "Saw the crypto-related language on your public materials — "
+            "curious how you're thinking about digital asset access and implementation for clients."
+        )
+    return (
+        "Noticed the alternatives language — curious whether digital assets "
+        "are starting to enter those portfolio conversations."
+    )
 
 def build_why_now(signal):
     if signal["priority"] == "high":
@@ -341,7 +383,10 @@ def run():
             url = urljoin(website, path)
             html = fetch_html(url)
             if html:
-                pages.append({"url": url, "text": html_to_text(html)})
+                pages.append({
+                    "url": url,
+                    "text": html_to_text(html),
+                })
 
         if not pages:
             continue
@@ -360,13 +405,14 @@ def run():
                     break
 
         contact_lines = [f"{name} — {title}" for name, title in contacts]
+
         if len(contact_lines) == 1:
             contact_lines.append("Chief Investment Officer")
         if not contact_lines:
             contact_lines = ["Chief Investment Officer", "Managing Partner"]
 
         output = (
-            f"\n{'🔥 HIGH PRIORITY' if signal['priority']=='high' else '🟡 MEDIUM PRIORITY'}\n\n"
+            f"\n{'🔥 HIGH PRIORITY' if signal['priority'] == 'high' else '🟡 MEDIUM PRIORITY'}\n\n"
             f"{firm['firm_name']}\n"
             f"Trigger: {signal['trigger']}\n"
             f"Why now: {build_why_now(signal)}\n"
@@ -384,9 +430,15 @@ def run():
             medium.append(output)
 
     print("\n🚀 RIA CRYPTO LEADS — PREVIEW\n")
+
+    if not high and not medium:
+        print("No crypto-relevant leads found in this run.")
+        return
+
     for item in high[:10]:
         print(item)
         print("-----")
+
     for item in medium[:10]:
         print(item)
         print("-----")
