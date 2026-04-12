@@ -16,7 +16,6 @@ HEADERS = {
 
 REQUEST_TIMEOUT = 20
 
-# Keep these small while testing
 DAILY_TIER1_LIMIT = 10
 DAILY_TIER2_LIMIT = 5
 
@@ -26,6 +25,8 @@ CONTENT_PATHS = [
     "/insights",
     "/blog",
     "/events",
+    "/press",
+    "/media",
 ]
 
 TEAM_PATHS = [
@@ -45,6 +46,10 @@ HIGH_SIGNAL_PATTERNS = [
     r"\bbitcoin\b",
     r"\bethereum\b",
     r"\bblockchain\b",
+    r"\btokenization\b",
+    r"\bstablecoin\b",
+    r"\bcrypto etf\b",
+    r"\bbitcoin etf\b",
 ]
 
 MEDIUM_SIGNAL_PATTERNS = [
@@ -76,6 +81,19 @@ BAD_WEBSITE_DOMAINS = [
     "youtu.be",
 ]
 
+BAD_NAME_PHRASES = {
+    "read more",
+    "learn more",
+    "contact us",
+    "our team",
+    "about us",
+    "leadership",
+    "management team",
+    "click here",
+    "view more",
+    "see more",
+}
+
 def clean_str(value):
     if pd.isna(value):
         return ""
@@ -86,9 +104,6 @@ def ensure_url(url):
     if not url:
         return ""
 
-    url = url.strip()
-
-    # If it already has a scheme, normalize scheme casing only
     if re.match(r"^https?://", url, flags=re.IGNORECASE):
         scheme, rest = url.split("://", 1)
         return scheme.lower() + "://" + rest
@@ -138,7 +153,43 @@ def sentence_snippet(text, pattern):
     start = max(0, match.start() - 120)
     end = min(len(text), match.end() + 120)
     snippet = text[start:end].strip()
-    return snippet[:300]
+    return snippet[:280]
+
+def page_looks_article_like(url, text):
+    url_l = url.lower()
+    text_l = text.lower()
+
+    if any(part in url_l for part in ["/news/", "/blog/", "/insights/", "/events/", "/press/", "/media/"]):
+        return True
+
+    if re.search(r"\b(20\d{2}|jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\b", text_l):
+        return True
+
+    return False
+
+def page_quality_score(url, text):
+    score = 0
+    url_l = url.lower()
+    text_l = text.lower()
+
+    if url_l.endswith("/"):
+        score -= 1
+
+    if any(path in url_l for path in ["/news/", "/blog/", "/insights/", "/events/", "/press/", "/media/"]):
+        score += 3
+    elif any(path == url_l.rstrip("/").split("/")[-1] for path in ["news", "blog", "insights", "events", "press", "media"]):
+        score += 0
+
+    if re.search(r"\b(20\d{2}|jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\b", text_l):
+        score += 2
+
+    if len(text) > 500:
+        score += 1
+
+    if "read more" in text_l and len(text) < 1000:
+        score -= 1
+
+    return score
 
 def find_latest_sec_download():
     print("Fetching SEC listing page...")
@@ -162,7 +213,6 @@ def find_latest_sec_download():
     if not candidates:
         raise RuntimeError("Could not find a Registered Investment Advisers download link on the SEC page.")
 
-    # First result on page is usually the newest
     return candidates[0][1]
 
 def load_dataframe_from_sec_file(file_url):
@@ -199,8 +249,7 @@ def choose_column(df, options, required=True):
             return col
     if required:
         raise RuntimeError(
-            f"Missing expected column. Tried: {options}. "
-            f"Actual columns start with: {list(df.columns[:20])}"
+            f"Missing expected column. Tried: {options}. Actual columns start with: {list(df.columns[:20])}"
         )
     return None
 
@@ -270,32 +319,65 @@ def assign_tier(score):
     return "skip"
 
 def detect_signal(pages):
-    for page in pages:
-        text = page["text"]
-        for p in HIGH_SIGNAL_PATTERNS:
-            if re.search(p, text, re.IGNORECASE):
-                return {
-                    "priority": "high",
-                    "source": page["url"],
-                    "trigger": "Explicit crypto-related language found on a public page",
-                    "evidence": sentence_snippet(text, p),
-                }
+    candidates = []
 
     for page in pages:
         text = page["text"]
+        url = page["url"]
+        quality = page_quality_score(url, text)
+
+        for p in HIGH_SIGNAL_PATTERNS:
+            if re.search(p, text, re.IGNORECASE):
+                candidates.append({
+                    "priority": "high",
+                    "source": url,
+                    "trigger": "Explicit crypto-related language found on a public page",
+                    "evidence": sentence_snippet(text, p),
+                    "quality": quality,
+                    "article_like": page_looks_article_like(url, text),
+                })
+
         for p in MEDIUM_SIGNAL_PATTERNS:
             if re.search(p, text, re.IGNORECASE):
-                return {
+                candidates.append({
                     "priority": "medium",
-                    "source": page["url"],
+                    "source": url,
                     "trigger": "Adjacent alternatives language found on a public page",
                     "evidence": sentence_snippet(text, p),
-                }
+                    "quality": quality,
+                    "article_like": page_looks_article_like(url, text),
+                })
+
+    if not candidates:
+        return None
+
+    high_candidates = [c for c in candidates if c["priority"] == "high"]
+    if high_candidates:
+        high_candidates.sort(key=lambda x: (x["article_like"], x["quality"]), reverse=True)
+        best = high_candidates[0]
+
+        # Reject very weak homepage-only high matches if evidence is too generic
+        if best["source"].rstrip("/").count("/") <= 2 and best["quality"] < 1:
+            return None
+        return best
+
+    medium_candidates = [c for c in candidates if c["priority"] == "medium"]
+    if medium_candidates:
+        medium_candidates = [c for c in medium_candidates if c["article_like"] or c["quality"] >= 2]
+        if not medium_candidates:
+            return None
+        medium_candidates.sort(key=lambda x: (x["article_like"], x["quality"]), reverse=True)
+        return medium_candidates[0]
 
     return None
 
 def looks_like_name(text):
     text = clean_text(text)
+    if not text:
+        return False
+    if text.lower() in BAD_NAME_PHRASES:
+        return False
+
     words = text.split()
     if len(words) < 2 or len(words) > 4:
         return False
@@ -320,7 +402,6 @@ def extract_contacts(html):
                     contacts.append((candidate, line))
                     break
 
-    # Deduplicate exact name-title pairs
     deduped = []
     seen = set()
     for name, title in contacts:
@@ -329,7 +410,6 @@ def extract_contacts(html):
             seen.add(key)
             deduped.append((name, title))
 
-    # Deduplicate by name only
     final_contacts = []
     seen_names = set()
     for name, title in deduped:
@@ -341,19 +421,13 @@ def extract_contacts(html):
 
 def build_hook(signal):
     if signal["priority"] == "high":
-        return (
-            "Saw the crypto-related language on your public materials — "
-            "curious how you're thinking about digital asset access and implementation for clients."
-        )
-    return (
-        "Noticed the alternatives language — curious whether digital assets "
-        "are starting to enter those portfolio conversations."
-    )
+        return "Saw the crypto-related language on your public materials — curious how you're thinking about digital asset access and implementation for clients."
+    return "Noticed the alternatives language — curious whether digital assets are starting to enter those portfolio conversations."
 
 def build_why_now(signal):
     if signal["priority"] == "high":
-        return "This is explicit crypto or digital-asset language on a current public page, which makes it a strong live signal."
-    return "This is a fresh adjacent signal, though it is not yet explicit crypto language."
+        return "This is explicit crypto or digital-asset language on a current public page, which makes it a stronger live signal."
+    return "This is a fresher adjacent signal, though it is not yet explicit crypto language."
 
 def run():
     df = load_sec_universe()
@@ -405,7 +479,6 @@ def run():
                     break
 
         contact_lines = [f"{name} — {title}" for name, title in contacts]
-
         if len(contact_lines) == 1:
             contact_lines.append("Chief Investment Officer")
         if not contact_lines:
