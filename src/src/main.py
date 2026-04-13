@@ -42,6 +42,13 @@ MEDIUM_SIGNAL_PATTERNS = [
     r"\balternatives\b",
     r"\bprivate markets\b",
     r"\bnew asset classes\b",
+
+    # NEW — portfolio activity signals
+    r"\bbought shares\b",
+    r"\bsold shares\b",
+    r"\bincreased stake\b",
+    r"\breduced position\b",
+    r"\betf\b",
 ]
 
 BAD_DOMAINS = [
@@ -232,14 +239,22 @@ def parse_google_news_rss(xml_text):
         pub_date = item.findtext("pubDate", default="")
         description = item.findtext("description", default="")
 
-        description = html.unescape(description)
-        description = BeautifulSoup(description, "html.parser").get_text(" ", strip=True)
+        description_html = html.unescape(description)
+        soup = BeautifulSoup(description_html, "html.parser")
+
+        # 🔥 Extract REAL publisher link (not Google wrapper)
+        real_link = link
+        a_tag = soup.find("a")
+        if a_tag and a_tag.get("href"):
+            real_link = a_tag["href"]
+
+        description_text = soup.get_text(" ", strip=True)
 
         items.append({
             "title": clean(title),
-            "link": clean(link),
+            "link": clean(real_link),  # ← THIS is the fix
             "pub_date": clean(pub_date),
-            "description": clean(description),
+            "description": clean(description_text),
         })
 
     return items
