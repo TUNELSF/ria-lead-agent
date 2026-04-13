@@ -1,0 +1,36 @@
+name: Monthly SEC Universe Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 10 1 * *"
+
+jobs:
+  update-universe:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r src/src/requirements.txt
+
+      - name: Download latest SEC universe
+        run: python src/src/update_universe.py
+
+      - name: Commit updated universe file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/current_universe.csv
+          git commit -m "Update SEC universe" || echo "No changes to commit"
+          git push
