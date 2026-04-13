@@ -1,7 +1,6 @@
 import os
 import re
 import html
-import random
 import traceback
 import requests
 import pandas as pd
@@ -42,13 +41,22 @@ MEDIUM_SIGNAL_PATTERNS = [
     r"\balternatives\b",
     r"\bprivate markets\b",
     r"\bnew asset classes\b",
-
-    # NEW — portfolio activity signals
     r"\bbought shares\b",
     r"\bsold shares\b",
     r"\bincreased stake\b",
     r"\breduced position\b",
     r"\betf\b",
+]
+
+PORTFOLIO_ACTIVITY_PATTERNS = [
+    r"\bbought shares\b",
+    r"\bsold shares\b",
+    r"\bincreased stake\b",
+    r"\breduced position\b",
+    r"\betf\b",
+    r"\btrust etf\b",
+    r"\betha\b",
+    r"\bibit\b",
 ]
 
 BAD_DOMAINS = [
@@ -215,7 +223,6 @@ def is_recent(pubdate_text):
     now_utc = pd.Timestamp.now("UTC")
     dt_ts = pd.Timestamp(dt)
 
-    # If dt is naive, make it UTC. If it's already tz-aware, convert to UTC.
     if dt_ts.tzinfo is None:
         dt_ts = dt_ts.tz_localize("UTC")
     else:
@@ -225,7 +232,6 @@ def is_recent(pubdate_text):
     return age_days <= NEWS_LOOKBACK_DAYS
 
 def build_news_query(firm_name):
-    # tighter query for explicit crypto signals
     query = f'"{firm_name}" (crypto OR "digital assets" OR bitcoin OR ethereum OR blockchain OR tokenization)'
     return "https://news.google.com/rss/search?q=" + quote_plus(query) + "&hl=en-US&gl=US&ceid=US:en"
 
@@ -242,17 +248,25 @@ def parse_google_news_rss(xml_text):
         description_html = html.unescape(description)
         soup = BeautifulSoup(description_html, "html.parser")
 
-        # 🔥 Extract REAL publisher link (not Google wrapper)
-        real_link = link
+        real_link = None
+
         a_tag = soup.find("a")
         if a_tag and a_tag.get("href"):
             real_link = a_tag["href"]
+
+        if not real_link:
+            match = re.search(r"https?://[^\s\"'<>]+", description_html)
+            if match:
+                real_link = match.group(0)
+
+        if not real_link:
+            real_link = link
 
         description_text = soup.get_text(" ", strip=True)
 
         items.append({
             "title": clean(title),
-            "link": clean(real_link),  # ← THIS is the fix
+            "link": clean(real_link),
             "pub_date": clean(pub_date),
             "description": clean(description_text),
         })
@@ -279,15 +293,27 @@ def detect_signal_from_news(firm_name):
             continue
 
         blob = f'{item["title"]} {item["description"]}'
+
         for pat in HIGH_SIGNAL_PATTERNS:
             if re.search(pat, blob, re.IGNORECASE):
-                candidates.append({
-                    "priority": "high",
-                    "source": item["link"],
-                    "source_date": item["pub_date"],
-                    "trigger": "Explicit crypto-related language found in recent media coverage",
-                    "evidence": sentence_snippet(blob, pat),
-                })
+
+                # downgrade ETF / holdings / trading activity to MEDIUM
+                if any(re.search(pp, blob, re.IGNORECASE) for pp in PORTFOLIO_ACTIVITY_PATTERNS):
+                    candidates.append({
+                        "priority": "medium",
+                        "source": item["link"],
+                        "source_date": item["pub_date"],
+                        "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+                        "evidence": sentence_snippet(blob, pat),
+                    })
+                else:
+                    candidates.append({
+                        "priority": "high",
+                        "source": item["link"],
+                        "source_date": item["pub_date"],
+                        "trigger": "Explicit crypto-related language found in recent media coverage",
+                        "evidence": sentence_snippet(blob, pat),
+                    })
 
         for pat in MEDIUM_SIGNAL_PATTERNS:
             if re.search(pat, blob, re.IGNORECASE):
@@ -295,7 +321,7 @@ def detect_signal_from_news(firm_name):
                     "priority": "medium",
                     "source": item["link"],
                     "source_date": item["pub_date"],
-                    "trigger": "Adjacent alternatives language found in recent media coverage",
+                    "trigger": "Adjacent alternatives or portfolio-activity language found in recent media coverage",
                     "evidence": sentence_snippet(blob, pat),
                 })
 
@@ -360,7 +386,7 @@ def detect_signal_from_site(site):
                     "priority": "medium",
                     "source": url,
                     "source_date": None,
-                    "trigger": "Adjacent alternatives language found on a firm page",
+                    "trigger": "Adjacent alternatives or portfolio-activity language found on a firm page",
                     "evidence": sentence_snippet(text, pat),
                 })
 
@@ -396,12 +422,12 @@ def find_contacts(site):
 def build_hook(signal):
     if signal["priority"] == "high":
         return "Saw the recent crypto-related signal — curious how you're thinking about digital asset access and implementation for clients."
-    return "Noticed the recent alternatives-related signal — curious whether digital assets are starting to enter those portfolio conversations."
+    return "Saw the recent portfolio or alternatives signal — curious whether digital assets are becoming more relevant in portfolio construction conversations."
 
 def build_why_now(signal):
     if signal["priority"] == "high":
         return "This is recent, explicit crypto or digital-asset language tied to a specific media or firm source."
-    return "This is a recent adjacent signal, though it is not yet explicit crypto language."
+    return "This is a recent portfolio, ETF, or adjacent alternatives signal that may indicate growing relevance of digital assets."
 
 def run():
     df = load_universe()
@@ -420,10 +446,8 @@ def run():
         site = firm["website"]
         print("Scanning:", firm_name)
 
-        # 1) media-first
         signal = detect_signal_from_news(firm_name)
 
-        # 2) fallback to site only if no media hit
         if signal is None:
             signal = detect_signal_from_site(site)
 
@@ -450,7 +474,6 @@ def run():
         print("No strong leads found.")
         return
 
-    # High first
     results.sort(key=lambda x: 0 if x["priority"] == "high" else 1)
 
     for r in results:
