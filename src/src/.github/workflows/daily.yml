@@ -1,9 +1,9 @@
 name: Daily RIA Leads
 
 on:
-  schedule:
-    - cron: "0 15 * * *"
   workflow_dispatch:
+  schedule:
+    - cron: "0 13 * * *"
 
 jobs:
   run:
@@ -11,18 +11,15 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
-      - name: Install packages
-        run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r src/src/requirements.txt
 
-      - name: Run script
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
-        run: python src/main.py
+      - name: Run daily scan
+        run: python src/src/main.py
