@@ -204,7 +204,17 @@ def is_recent(pubdate_text):
     dt = parse_pubdate(pubdate_text)
     if dt is None:
         return False
-    age_days = (pd.Timestamp.utcnow().tz_localize("UTC") - pd.Timestamp(dt)).days
+
+    now_utc = pd.Timestamp.now("UTC")
+    dt_ts = pd.Timestamp(dt)
+
+    # If dt is naive, make it UTC. If it's already tz-aware, convert to UTC.
+    if dt_ts.tzinfo is None:
+        dt_ts = dt_ts.tz_localize("UTC")
+    else:
+        dt_ts = dt_ts.tz_convert("UTC")
+
+    age_days = (now_utc - dt_ts).days
     return age_days <= NEWS_LOOKBACK_DAYS
 
 def build_news_query(firm_name):
