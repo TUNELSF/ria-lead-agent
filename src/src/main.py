@@ -101,6 +101,28 @@ def fetch(url):
     except Exception:
         return None
 
+def resolve_google_news_url(url):
+    if not url:
+        return url
+    if "news.google.com" not in url:
+        return url
+
+    try:
+        r = requests.get(
+            url,
+            headers=HEADERS,
+            timeout=REQUEST_TIMEOUT,
+            allow_redirects=True,
+        )
+        final_url = str(r.url).strip()
+
+        if final_url and "news.google.com" not in final_url:
+            return final_url
+
+        return url
+    except Exception:
+        return url
+
 def fetch_html(url):
     r = fetch(url)
     if r and r.status_code == 200 and "text/html" in r.headers.get("content-type", "").lower():
@@ -262,6 +284,8 @@ def parse_google_news_rss(xml_text):
         if not real_link:
             real_link = link
 
+        real_link = resolve_google_news_url(real_link)
+
         description_text = soup.get_text(" ", strip=True)
 
         items.append({
@@ -296,8 +320,6 @@ def detect_signal_from_news(firm_name):
 
         for pat in HIGH_SIGNAL_PATTERNS:
             if re.search(pat, blob, re.IGNORECASE):
-
-                # downgrade ETF / holdings / trading activity to MEDIUM
                 if any(re.search(pp, blob, re.IGNORECASE) for pp in PORTFOLIO_ACTIVITY_PATTERNS):
                     candidates.append({
                         "priority": "medium",
