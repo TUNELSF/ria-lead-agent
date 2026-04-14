@@ -203,11 +203,46 @@ def score_firm(row):
 
 def select_batch(df):
     df = df.copy()
-    df["score"] = df.apply(score_firm, axis=1)
-    df = df.sort_values(["score", "firm"], ascending=[False, True])
 
-    top = df.head(min(200, len(df)))
-    return top.sample(min(DAILY_SAMPLE_SIZE, len(top)), random_state=42).to_dict("records")
+    PRIORITY_KEYWORDS = [
+        "capital",
+        "partners",
+        "invest",
+        "asset",
+        "management",
+        "wealth",
+        "advis",
+        "financial",
+        "etf",
+        "fund",
+        "private",
+        "institutional",
+        "markets",
+        "global",
+        "strategic",
+        "alternatives",
+    ]
+
+    def is_priority(row):
+        text = (row["firm"] + " " + row["website"]).lower()
+        return any(k in text for k in PRIORITY_KEYWORDS)
+
+    df["priority"] = df.apply(is_priority, axis=1)
+
+    tier1 = df[df["priority"] == True]
+    tier2 = df[df["priority"] == False]
+
+    # sort Tier 1 by quality score
+    tier1["score"] = tier1.apply(score_firm, axis=1)
+    tier1 = tier1.sort_values(["score", "firm"], ascending=[False, True])
+
+    # sample
+    batch_tier1 = tier1.head(300).sample(min(15, len(tier1)), random_state=42)
+    batch_tier2 = tier2.sample(min(5, len(tier2)), random_state=42)
+
+    batch = pd.concat([batch_tier1, batch_tier2])
+
+    return batch.to_dict("records")
 
 def parse_pubdate(pubdate_text):
     try:
