@@ -5,7 +5,7 @@ import traceback
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-from urllib.parse import urljoin, quote_plus
+from urllib.parse import urljoin, quote_plus, urlparse, parse_qs, unquote
 from email.utils import parsedate_to_datetime
 import xml.etree.ElementTree as ET
 
@@ -100,28 +100,6 @@ def fetch(url):
         return requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT, allow_redirects=True)
     except Exception:
         return None
-
-def resolve_google_news_url(url):
-    if not url:
-        return url
-    if "news.google.com" not in url:
-        return url
-
-    try:
-        r = requests.get(
-            url,
-            headers=HEADERS,
-            timeout=REQUEST_TIMEOUT,
-            allow_redirects=True,
-        )
-        final_url = str(r.url).strip()
-
-        if final_url and "news.google.com" not in final_url:
-            return final_url
-
-        return url
-    except Exception:
-        return url
 
 def fetch_html(url):
     r = fetch(url)
@@ -255,9 +233,21 @@ def is_recent(pubdate_text):
 
 def build_news_query(firm_name):
     query = f'"{firm_name}" (crypto OR "digital assets" OR bitcoin OR ethereum OR blockchain OR tokenization)'
-    return "https://news.google.com/rss/search?q=" + quote_plus(query) + "&hl=en-US&gl=US&ceid=US:en"
+    return "https://www.bing.com/news/search?q=" + quote_plus(query) + "&format=rss"
 
-def parse_google_news_rss(xml_text):
+def extract_real_bing_url(url):
+    if not url:
+        return url
+
+    parsed = urlparse(url)
+    qs = parse_qs(parsed.query)
+
+    if "url" in qs and qs["url"]:
+        return unquote(qs["url"][0])
+
+    return url
+
+def parse_news_rss(xml_text):
     items = []
     root = ET.fromstring(xml_text)
 
@@ -269,24 +259,9 @@ def parse_google_news_rss(xml_text):
 
         description_html = html.unescape(description)
         soup = BeautifulSoup(description_html, "html.parser")
-
-        real_link = None
-
-        a_tag = soup.find("a")
-        if a_tag and a_tag.get("href"):
-            real_link = a_tag["href"]
-
-        if not real_link:
-            match = re.search(r"https?://[^\s\"'<>]+", description_html)
-            if match:
-                real_link = match.group(0)
-
-        if not real_link:
-            real_link = link
-
-        real_link = resolve_google_news_url(real_link)
-
         description_text = soup.get_text(" ", strip=True)
+
+        real_link = extract_real_bing_url(clean(link))
 
         items.append({
             "title": clean(title),
@@ -304,7 +279,7 @@ def detect_signal_from_news(firm_name):
         return None
 
     try:
-        items = parse_google_news_rss(r.text)
+        items = parse_news_rss(r.text)
     except Exception:
         return None
 
