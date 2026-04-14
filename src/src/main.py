@@ -90,6 +90,14 @@ CORP_SUFFIXES = [
     "llc", "inc", "l.p.", "lp", "llp", "corp", "corporation", "co.", "co", "ltd", "limited"
 ]
 
+GENERIC_NAME_WORDS = [
+    "wealth management",
+    "investment management",
+    "asset management",
+    "financial services",
+    "capital management",
+]
+
 def clean(x):
     return "" if pd.isna(x) else str(x).strip()
 
@@ -221,13 +229,19 @@ def normalize_firm_name(name):
     words = [w for w in name.split() if w not in CORP_SUFFIXES]
     return " ".join(words).strip()
 
+def is_generic_name(name):
+    name = normalize_firm_name(name)
+    return any(g == name or g in name for g in GENERIC_NAME_WORDS)
+
 def build_firm_index(df):
     firm_map = {}
     normalized_names = []
 
     for _, row in df.iterrows():
         norm = normalize_firm_name(row["firm"])
-        if norm and norm not in firm_map:
+        if not norm:
+            continue
+        if norm not in firm_map:
             firm_map[norm] = {
                 "firm": row["firm"],
                 "website": row["website"],
@@ -321,12 +335,15 @@ def pick_evidence_snippet(blob):
 
 def match_article_to_sec_firm(blob, firm_map, normalized_names):
     blob_norm = normalize_firm_name(blob)
+    wrapped_blob = f" {blob_norm} "
 
-    # Prefer longer names first to avoid short-name collisions
+    # Prefer longer, more distinctive names first
     for norm_name in sorted(normalized_names, key=len, reverse=True):
         if len(norm_name) < 8:
             continue
-        if norm_name in blob_norm:
+        if is_generic_name(firm_map[norm_name]["firm"]):
+            continue
+        if f" {norm_name} " in wrapped_blob:
             return firm_map[norm_name]
 
     return None
@@ -388,16 +405,18 @@ def build_why_now(priority):
     return "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets."
 
 def dedupe_results(results):
-    seen = set()
-    out = []
+    best = {}
 
     for r in results:
-        key = (r["firm"].lower(), r["source"])
-        if key not in seen:
-            seen.add(key)
-            out.append(r)
+        key = r["firm"].lower()
 
-    return out
+        if key not in best:
+            best[key] = r
+        else:
+            if r["priority"] == "high" and best[key]["priority"] != "high":
+                best[key] = r
+
+    return list(best.values())
 
 def run():
     df = load_universe()
