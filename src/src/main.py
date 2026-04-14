@@ -45,6 +45,10 @@ HIGH_SIGNAL_PATTERNS = [
     r"\bstablecoin\b",
     r"\bbitcoin etf\b",
     r"\bcrypto etf\b",
+    r"\blaunch(?:ed|es)?\b",
+    r"\bannounc(?:ed|es)?\b",
+    r"\bnew offering\b",
+    r"\bnew product\b",
 ]
 
 MEDIUM_SIGNAL_PATTERNS = [
@@ -75,6 +79,28 @@ PORTFOLIO_ACTIVITY_PATTERNS = [
     r"\bibit\b",
 ]
 
+DEMAND_PATTERNS = [
+    r"\bclient demand\b",
+    r"\badvisor demand\b",
+    r"\bdemand is growing\b",
+    r"\bgrowing demand\b",
+]
+
+EVENT_PATTERNS = [
+    r"\bwebinar\b",
+    r"\bpanel\b",
+    r"\bconference\b",
+    r"\bevent\b",
+]
+
+LAUNCH_PATTERNS = [
+    r"\blaunch(?:ed|es)?\b",
+    r"\bannounc(?:ed|es)?\b",
+    r"\bnew offering\b",
+    r"\bnew product\b",
+    r"\broll(?:ed)? out\b",
+]
+
 BAD_DOMAINS = [
     "facebook.com",
     "linkedin.com",
@@ -97,6 +123,13 @@ GENERIC_NAME_WORDS = [
     "financial services",
     "capital management",
 ]
+
+STOPWORDS = {
+    "the", "and", "of", "for", "in", "to", "a", "an", "group", "company", "companies",
+    "management", "wealth", "capital", "advisors", "advisor", "investments", "investment",
+    "financial", "services", "partners", "asset", "assets", "corp", "corporation", "inc",
+    "llc", "lp", "llp", "co", "limited"
+}
 
 def clean(x):
     return "" if pd.isna(x) else str(x).strip()
@@ -229,6 +262,10 @@ def normalize_firm_name(name):
     words = [w for w in name.split() if w not in CORP_SUFFIXES]
     return " ".join(words).strip()
 
+def tokenize_name(name):
+    norm = normalize_firm_name(name)
+    return [w for w in norm.split() if w and w not in STOPWORDS and len(w) > 2]
+
 def is_generic_name(name):
     name = normalize_firm_name(name)
     return any(g == name or g in name for g in GENERIC_NAME_WORDS)
@@ -245,6 +282,7 @@ def build_firm_index(df):
             firm_map[norm] = {
                 "firm": row["firm"],
                 "website": row["website"],
+                "tokens": tokenize_name(row["firm"]),
             }
             normalized_names.append(norm)
 
@@ -333,20 +371,58 @@ def pick_evidence_snippet(blob):
             return sentence_snippet(blob, pat)
     return sentence_snippet(blob)
 
+def score_match(norm_name, firm_info, blob_norm):
+    tokens = firm_info["tokens"]
+    if not tokens:
+        return 0
+
+    # Exact normalized phrase match is strongest
+    exact_phrase = f" {norm_name} " in f" {blob_norm} "
+
+    token_hits = sum(1 for t in tokens if f" {t} " in f" {blob_norm} ")
+    distinctive_hits = sum(1 for t in tokens if t not in {"wealth", "management", "capital", "advisors", "investment", "investments"} and f" {t} " in f" {blob_norm} ")
+
+    score = 0
+    if exact_phrase:
+        score += 10
+    score += token_hits * 2
+    score += distinctive_hits * 3
+
+    # Penalize very short / ambiguous names
+    if len(tokens) == 1:
+        score -= 4
+    if len(tokens) == 2 and distinctive_hits == 0:
+        score -= 3
+
+    return score
+
 def match_article_to_sec_firm(blob, firm_map, normalized_names):
     blob_norm = normalize_firm_name(blob)
-    wrapped_blob = f" {blob_norm} "
 
-    # Prefer longer, more distinctive names first
-    for norm_name in sorted(normalized_names, key=len, reverse=True):
-        if len(norm_name) < 8:
-            continue
-        if is_generic_name(firm_map[norm_name]["firm"]):
-            continue
-        if f" {norm_name} " in wrapped_blob:
-            return firm_map[norm_name]
+    candidates = []
 
-    return None
+    for norm_name in normalized_names:
+        firm_info = firm_map[norm_name]
+
+        if is_generic_name(firm_info["firm"]):
+            continue
+
+        score = score_match(norm_name, firm_info, blob_norm)
+
+        # Require stronger evidence for a match
+        if score >= 8:
+            candidates.append((score, firm_info))
+
+    if not candidates:
+        return None
+
+    candidates.sort(key=lambda x: x[0], reverse=True)
+
+    # If top two are too close, skip to avoid false positives
+    if len(candidates) > 1 and candidates[0][0] - candidates[1][0] < 2:
+        return None
+
+    return candidates[0][1]
 
 def gather_media_candidates():
     articles = []
@@ -388,12 +464,18 @@ def gather_media_candidates():
 def build_hook(priority, trigger, evidence):
     text = f"{trigger} {evidence}".lower()
 
-    if "webinar" in text or "panel" in text or "conference" in text:
+    if any(re.search(p, text, re.IGNORECASE) for p in EVENT_PATTERNS):
         return "Saw the recent event-related signal — curious how you're educating clients or advisors around digital assets."
-    if "bought shares" in text or "sold shares" in text or "etf" in text:
-        return "Saw the recent ETF or portfolio activity — curious whether digital assets are becoming more relevant in portfolio construction conversations."
-    if "client demand" in text or "advisor demand" in text:
+
+    if any(re.search(p, text, re.IGNORECASE) for p in DEMAND_PATTERNS):
         return "Saw the recent demand signal — curious how you're thinking about digital asset access for clients or advisors."
+
+    if any(re.search(p, text, re.IGNORECASE) for p in PORTFOLIO_ACTIVITY_PATTERNS):
+        return "Saw the recent ETF or portfolio activity — curious whether digital assets are becoming more relevant in portfolio construction conversations."
+
+    if any(re.search(p, text, re.IGNORECASE) for p in LAUNCH_PATTERNS):
+        return "Saw the recent launch or product signal — curious how you're thinking about bringing digital-asset capabilities into the client offering."
+
     if priority == "high":
         return "Saw the recent crypto-related signal — curious how you're thinking about digital asset access and implementation for clients."
 
@@ -413,8 +495,13 @@ def dedupe_results(results):
         if key not in best:
             best[key] = r
         else:
-            if r["priority"] == "high" and best[key]["priority"] != "high":
+            current = best[key]
+            if r["priority"] == "high" and current["priority"] != "high":
                 best[key] = r
+            elif r["priority"] == current["priority"]:
+                # prefer more recent dated item if both same priority
+                if clean(r.get("source_date")) > clean(current.get("source_date")):
+                    best[key] = r
 
     return list(best.values())
 
