@@ -1,3 +1,4 @@
+import json
 import os
 import re
 import html
@@ -10,6 +11,8 @@ from email.utils import parsedate_to_datetime
 import xml.etree.ElementTree as ET
 
 SEC_UNIVERSE_PATH = "data/current_universe.csv"
+
+LEADS_JSON_PATH = "frontend/public/leads.json"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (RIA-Lead-Agent)"
@@ -504,7 +507,63 @@ def dedupe_results(results):
                     best[key] = r
 
     return list(best.values())
+def infer_signal_type(trigger, evidence):
+    text = f"{trigger} {evidence}".lower()
 
+    if "bought shares" in text or "sold shares" in text or "etf" in text:
+        return "etf_activity", "portfolio"
+
+    if "client demand" in text or "advisor demand" in text:
+        return "demand_signal", "market_demand"
+
+    if "webinar" in text or "panel" in text or "conference" in text or "event" in text:
+        return "event", "education"
+
+    if "launch" in text or "announc" in text or "new offering" in text or "new product" in text:
+        return "product_launch", "offering"
+
+    return "crypto_signal", "general"
+
+
+def to_dashboard_lead(result, idx):
+    signal_type, signal_category = infer_signal_type(result["trigger"], result["evidence"])
+
+    return {
+        "id": str(idx + 1),
+        "firm": result["firm"],
+        "priority": result["priority"],
+        "signal_type": signal_type,
+        "signal_category": signal_category,
+        "trigger": result["trigger"],
+        "why_now": result["why_now"],
+        "source": result["source"],
+        "source_label": urlparse(result["source"]).netloc.replace("www.", "") if result["source"] else "source",
+        "source_date": result["source_date"],
+        "evidence": result["evidence"],
+        "hook": result["hook"],
+        "contacts": [c[0] if isinstance(c, (list, tuple)) else c for c in result["contacts"]],
+        "status": "new",
+        "firm_profile": {
+            "aum": None,
+            "aum_bucket": "unknown",
+            "growth_1y": None,
+            "asset_focus": [],
+            "product_types": [],
+            "bd_affiliated": None,
+            "independence": "unknown"
+        }
+    }
+
+
+def write_leads_json(results):
+    os.makedirs("frontend/public", exist_ok=True)
+
+    payload = [to_dashboard_lead(r, i) for i, r in enumerate(results)]
+
+    with open(LEADS_JSON_PATH, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2)
+
+    print(f"Wrote {len(payload)} leads to {LEADS_JSON_PATH}")
 def run():
     df = load_universe()
     print("Firms in SEC universe:", len(df))
@@ -543,11 +602,13 @@ def run():
 
     results = dedupe_results(results)
 
-    print("\n🚀 RIA CRYPTO LEADS — PREVIEW\n")
+write_leads_json(results)
 
-    if not results:
-        print("No strong leads found.")
-        return
+print("\n🚀 RIA CRYPTO LEADS — PREVIEW\n")
+
+if not results:
+    print("No strong leads found.")
+    return
 
     results.sort(key=lambda x: (0 if x["priority"] == "high" else 1, x["firm"]))
 
