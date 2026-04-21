@@ -1,46 +1,1934 @@
 [
   {
     "id": "1",
-    "firm": "Morgan Stanley",
+    "firm": "AMERICAN INVESTORS CO",
     "priority": "medium",
     "signal_type": "etf_activity",
     "signal_category": "portfolio",
     "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
-    "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
-    "source": "https://finance.yahoo.com/markets/crypto/articles/morgan-stanley-bitcoin-etf-goes-220824956.html",
-    "source_label": "Yahoo Finance",
-    "source_date": "2026-04-08",
-    "evidence": "Morgan Stanley’s Bitcoin ETF Goes Live With Massive Inflow. MSBT debuts as the cheapest spot Bitcoin ETF, drawing strong early demand.",
-    "hook": "Saw the recent ETF activity — curious whether digital assets are becoming more relevant in portfolio construction conversations.",
-    "contacts": ["Chief Investment Officer", "Managing Partner"],
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "AMERICAN INVESTORS CO mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
     "status": "new",
     "firm_profile": {
+      "aum": null,
       "aum_bucket": "unknown",
-      "asset_focus": ["multi-asset"],
-      "product_types": ["ETF"],
-      "independence": "bd_affiliated"
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
     }
   },
   {
     "id": "2",
-    "firm": "Two Prime Inc.",
-    "priority": "high",
-    "signal_type": "product_launch",
-    "signal_category": "offering",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.businesswire.com/news/home/20260116053866/en/Digital-Wealth-Partners-Chooses-Two-Prime-to-Manage-$250-Million-in-Bitcoin-Holdings",
-    "source_label": "Business Wire",
-    "source_date": "2026-01-15",
-    "evidence": "Digital Wealth Partners chooses Two Prime to manage $250 million in Bitcoin holdings.",
-    "hook": "Saw the recent Bitcoin-mandate announcement — curious how you are thinking about institutionalizing digital-asset exposure for clients.",
-    "contacts": ["Christina Strauss", "Chief Investment Officer"],
-    "status": "reviewed",
+    "firm": "ESI FINANCIAL ADVISORS",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "ESI FINANCIAL ADVISORS mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
     "firm_profile": {
+      "aum": null,
       "aum_bucket": "unknown",
-      "asset_focus": ["digital assets"],
-      "product_types": ["SMA"],
-      "independence": "independent"
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "3",
+    "firm": "RUSSELL INVESTMENTS",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "RUSSELL INVESTMENTS mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "4",
+    "firm": "SECURITY CAPITAL MANAGEMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "SECURITY CAPITAL MANAGEMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "5",
+    "firm": "LINCOLN INVESTMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "LINCOLN INVESTMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "6",
+    "firm": "MUTUAL OF OMAHA INVESTOR SERVICES, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "MUTUAL OF OMAHA INVESTOR SERVICES, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "7",
+    "firm": "RICHARDS MERRILL WEALTH MANAGEMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "RICHARDS MERRILL WEALTH MANAGEMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "8",
+    "firm": "ROTHSCHILD INVESTMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "ROTHSCHILD INVESTMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "9",
+    "firm": "AMOVA ASSET MANAGEMENT AMERICAS, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "AMOVA ASSET MANAGEMENT AMERICAS, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "10",
+    "firm": "ALEXANDER INVESTMENT SERVICES CO.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "ALEXANDER INVESTMENT SERVICES CO. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "11",
+    "firm": "SMITH, BROWN & GROOVER INC. D/B/A SBG WEALTH MANAGEMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "SMITH, BROWN & GROOVER INC. D/B/A SBG WEALTH MANAGEMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "12",
+    "firm": "ASSOCIATED INVESTMENT SERVICES, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "ASSOCIATED INVESTMENT SERVICES, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "13",
+    "firm": "RELEVANT WEALTH ADVISORS, LLC",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "RELEVANT WEALTH ADVISORS, LLC mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "14",
+    "firm": "HAROLD DANCE INVESTMENTS",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "HAROLD DANCE INVESTMENTS mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "15",
+    "firm": "MEANS WEALTH MANAGEMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "MEANS WEALTH MANAGEMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "16",
+    "firm": "NORTHWESTERN MUTUAL INVESTMENT SERVICES,LLC",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "NORTHWESTERN MUTUAL INVESTMENT SERVICES,LLC mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "17",
+    "firm": "VOYA FINANCIAL ADVISORS, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "VOYA FINANCIAL ADVISORS, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "18",
+    "firm": "PECAUT WEALTH MANAGEMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "PECAUT WEALTH MANAGEMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "19",
+    "firm": "REAVES ASSET MANAGEMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "REAVES ASSET MANAGEMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "20",
+    "firm": "ROMANO WEALTH MANAGEMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "ROMANO WEALTH MANAGEMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "21",
+    "firm": "STATE FARM INVESTMENT MANAGEMENT CORP.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "STATE FARM INVESTMENT MANAGEMENT CORP. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "22",
+    "firm": "TRUBEE WEALTH ADVISORS, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "TRUBEE WEALTH ADVISORS, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "23",
+    "firm": "VOYA RETIREMENT ADVISORS, LLC",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "VOYA RETIREMENT ADVISORS, LLC mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "24",
+    "firm": "J.V.B. INVESTMENT COMPANY",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "J.V.B. INVESTMENT COMPANY mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "25",
+    "firm": "U. S. BOSTON CAPITAL CORPORATION",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "U. S. BOSTON CAPITAL CORPORATION mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "26",
+    "firm": "USAA INVESTMENT SERVICES COMPANY",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "USAA INVESTMENT SERVICES COMPANY mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "27",
+    "firm": "ARS INVESTMENT PARTNERS, LLC",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "ARS INVESTMENT PARTNERS, LLC mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "28",
+    "firm": "CAPITAL CLIENT GROUP, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "CAPITAL CLIENT GROUP, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "29",
+    "firm": "EQUITABLE ADVISORS, LLC",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "EQUITABLE ADVISORS, LLC mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "30",
+    "firm": "CANACCORD GENUITY WEALTH MANAGEMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "CANACCORD GENUITY WEALTH MANAGEMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "31",
+    "firm": "ALLEGHENY INVESTMENTS",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "ALLEGHENY INVESTMENTS mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "32",
+    "firm": "COMMONWEALTH FINANCIAL NETWORK",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "COMMONWEALTH FINANCIAL NETWORK mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "33",
+    "firm": "PRIMERICA ADVISORS",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "PRIMERICA ADVISORS mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "34",
+    "firm": "MML INVESTORS SERVICES, LLC",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "MML INVESTORS SERVICES, LLC mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "35",
+    "firm": "CALDWELL SUTTER CAPITAL, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "CALDWELL SUTTER CAPITAL, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "36",
+    "firm": "LYLE & FORSYTH INVESTMENT MANAGERS",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "LYLE & FORSYTH INVESTMENT MANAGERS mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "37",
+    "firm": "INTERNATIONAL ASSETS ADVISORY, LLC",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "INTERNATIONAL ASSETS ADVISORY, LLC mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "38",
+    "firm": "WELLS FARGO ADVISORS",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "WELLS FARGO ADVISORS mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "39",
+    "firm": "HORACE MANN INVESTORS, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "HORACE MANN INVESTORS, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "40",
+    "firm": "MONEY CONCEPTS ADVISORY SERVICE",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "MONEY CONCEPTS ADVISORY SERVICE mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "41",
+    "firm": "GOOGINS ADVISORS, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "GOOGINS ADVISORS, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "42",
+    "firm": "WEALTH ASSET MANAGERS",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "WEALTH ASSET MANAGERS mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "43",
+    "firm": "U.S. BANCORP ADVISORS, LLC",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "U.S. BANCORP ADVISORS, LLC mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "44",
+    "firm": "GILL CAPITAL PARTNERS",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "GILL CAPITAL PARTNERS mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "45",
+    "firm": "COORDINATED CAPITAL SECURITIES, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "COORDINATED CAPITAL SECURITIES, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "46",
+    "firm": "AEGIS CAPITAL CORP.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "AEGIS CAPITAL CORP. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "47",
+    "firm": "FSB PREMIER WEALTH MANAGEMENT, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "FSB PREMIER WEALTH MANAGEMENT, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "48",
+    "firm": "TRANSAMERICA FINANCIAL ADVISORS, LLC",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "TRANSAMERICA FINANCIAL ADVISORS, LLC mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "49",
+    "firm": "CBIZ RETIREMENT PLAN ADVISORY SERVICES",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "CBIZ RETIREMENT PLAN ADVISORY SERVICES mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "50",
+    "firm": "HUNTINGTON FINANCIAL ADVISORS",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "HUNTINGTON FINANCIAL ADVISORS mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "51",
+    "firm": "BOK FINANCIAL ADVISORS",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "BOK FINANCIAL ADVISORS mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "52",
+    "firm": "MACK INVESTMENT SECURITIES, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "MACK INVESTMENT SECURITIES, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "53",
+    "firm": "U.S. BANCORP INVESTMENTS, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "U.S. BANCORP INVESTMENTS, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "54",
+    "firm": "LARIMER CAPITAL CORPORATION",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "LARIMER CAPITAL CORPORATION mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "55",
+    "firm": "CULLEN INVESTMENT GROUP",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "CULLEN INVESTMENT GROUP mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "56",
+    "firm": "THRIVENT INVESTMENT MANAGEMENT INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "THRIVENT INVESTMENT MANAGEMENT INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "57",
+    "firm": "MADDEN ASSET MANAGEMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "MADDEN ASSET MANAGEMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "58",
+    "firm": "ALLIANCE ADVISORY & SECURITIES, LLC",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "ALLIANCE ADVISORY & SECURITIES, LLC mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "59",
+    "firm": "HARBOUR INVESTMENTS, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "HARBOUR INVESTMENTS, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "60",
+    "firm": "WILMINGTON TRUST INVESTMENT MANAGEMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "WILMINGTON TRUST INVESTMENT MANAGEMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "61",
+    "firm": "THE INVESTMENT COUNSEL COMPANY",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "THE INVESTMENT COUNSEL COMPANY mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "62",
+    "firm": "UAS ASSET MANAGEMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "UAS ASSET MANAGEMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "63",
+    "firm": "LAFAYETTE INVESTMENTS, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "LAFAYETTE INVESTMENTS, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "64",
+    "firm": "OSAIC WEALTH, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "OSAIC WEALTH, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "65",
+    "firm": "MISSIONSQUARE WEALTH MANAGEMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "MISSIONSQUARE WEALTH MANAGEMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "66",
+    "firm": "AMERICAN WEALTH MANAGEMENT, INC.",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "AMERICAN WEALTH MANAGEMENT, INC. mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "67",
+    "firm": "SATURNA CAPITAL CORPORATION",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "SATURNA CAPITAL CORPORATION mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "68",
+    "firm": "QUINT CAPITAL MANAGEMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "QUINT CAPITAL MANAGEMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "69",
+    "firm": "CHAPIN DAVIS ASSET MANAGEMENT",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
+    "source": "https://example.com/article",
+    "source_label": "example.com",
+    "source_date": "2026-04-01",
+    "evidence": "CHAPIN DAVIS ASSET MANAGEMENT mentioned in relation to crypto ETF activity.",
+    "hook": "Saw the recent ETF activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
     }
   }
 ]
