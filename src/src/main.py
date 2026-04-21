@@ -1,38 +1,104 @@
 import os
 import json
-import pandas as pd
 from urllib.parse import urlparse
 
-UNIVERSE_PATH = "src/src/data/current_universe.csv"
+import pandas as pd
+
+UNIVERSE_PATH = "data/current_universe.csv"
 LEADS_JSON_PATH = "frontend/public/leads.json"
 
 
 # -----------------------
-# Load universe
+# Helpers
+# -----------------------
+def clean(value):
+    if pd.isna(value):
+        return ""
+    return str(value).strip()
+
+
+def ensure_url(url):
+    url = clean(url)
+    if not url:
+        return ""
+    if url.lower().startswith("http://") or url.lower().startswith("https://"):
+        return url
+    return "https://" + url
+
+
+def choose_column(df, options):
+    for col in options:
+        if col in df.columns:
+            return col
+    return None
+
+
+# -----------------------
+# Load universe from SEC file
 # -----------------------
 def load_universe():
-    df = pd.read_csv(UNIVERSE_PATH)
-    return df["firm"].dropna().tolist()
+    if not os.path.exists(UNIVERSE_PATH):
+        raise FileNotFoundError(f"Missing universe file: {UNIVERSE_PATH}")
+
+    df = pd.read_csv(UNIVERSE_PATH, encoding="latin1", low_memory=False)
+
+    name_col = choose_column(
+        df,
+        [
+            "Primary Business Name",
+            "Legal Name",
+            "Firm Name",
+            "Business Name",
+        ],
+    )
+
+    website_col = choose_column(
+        df,
+        [
+            "Website Address",
+            "Website",
+            "Web Address",
+        ],
+    )
+
+    if not name_col:
+        raise KeyError(
+            f"Could not find a firm-name column. First columns are: {list(df.columns[:30])}"
+        )
+
+    out = pd.DataFrame()
+    out["firm"] = df[name_col].apply(clean)
+
+    if website_col:
+        out["website"] = df[website_col].apply(clean).apply(ensure_url)
+    else:
+        out["website"] = ""
+
+    out = out[out["firm"] != ""].copy()
+    out = out.drop_duplicates(subset=["firm"]).copy()
+
+    return out.to_dict("records")
 
 
 # -----------------------
-# Dummy signal detection (replace later with your real logic)
+# Dummy signal detection for MVP plumbing
+# Replace later with real signal engine
 # -----------------------
-def detect_signal_from_news(firm_name):
-    # This is placeholder logic so system works end-to-end
-    # Replace with your real scraping / media logic
+def detect_signal_from_news(firm_name, website=""):
+    text = firm_name.lower()
 
-    if "capital" in firm_name.lower():
+    if any(word in text for word in ["capital", "invest", "asset", "wealth", "advis"]):
         return {
             "firm": firm_name,
             "priority": "medium",
             "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
-            "why_now": "Recent ETF or portfolio signal tied to digital assets relevance",
+            "why_now": "Recent ETF or portfolio signal tied to digital assets relevance.",
             "source": "https://example.com/article",
             "source_date": "2026-04-01",
-            "evidence": f"{firm_name} mentioned in relation to crypto ETF activity",
+            "evidence": f"{firm_name} mentioned in relation to crypto ETF activity.",
             "hook": "Saw the recent ETF activity — curious whether digital assets are becoming more relevant in portfolio construction conversations.",
-            "contacts": ["Chief Investment Officer", "Managing Partner"]
+            "contacts": ["Chief Investment Officer", "Managing Partner"],
+            "website": website,
         }
 
     return None
@@ -45,11 +111,11 @@ def dedupe_results(results):
     seen = set()
     deduped = []
 
-    for r in results:
-        key = (r["firm"], r["trigger"])
+    for result in results:
+        key = (result["firm"], result["trigger"])
         if key not in seen:
             seen.add(key)
-            deduped.append(r)
+            deduped.append(result)
 
     return deduped
 
@@ -66,10 +132,10 @@ def infer_signal_type(trigger, evidence):
     if "demand" in text:
         return "demand_signal", "market_demand"
 
-    if "event" in text or "conference" in text:
+    if "event" in text or "conference" in text or "webinar" in text:
         return "event", "education"
 
-    if "launch" in text or "product" in text:
+    if "launch" in text or "product" in text or "offering" in text:
         return "product_launch", "offering"
 
     return "crypto_signal", "general"
@@ -83,6 +149,18 @@ def to_dashboard_lead(result, idx):
         result["trigger"], result["evidence"]
     )
 
+    source = result.get("source", "")
+    source_label = "source"
+    if source:
+        try:
+            source_label = urlparse(source).netloc.replace("www.", "") or "source"
+        except Exception:
+            source_label = "source"
+
+    contacts = result.get("contacts", [])
+    if not contacts:
+        contacts = ["Chief Investment Officer", "Managing Partner"]
+
     return {
         "id": str(idx + 1),
         "firm": result["firm"],
@@ -91,12 +169,12 @@ def to_dashboard_lead(result, idx):
         "signal_category": signal_category,
         "trigger": result["trigger"],
         "why_now": result["why_now"],
-        "source": result["source"],
-        "source_label": urlparse(result["source"]).netloc.replace("www.", ""),
-        "source_date": result["source_date"],
+        "source": source,
+        "source_label": source_label,
+        "source_date": result.get("source_date"),
         "evidence": result["evidence"],
         "hook": result["hook"],
-        "contacts": result["contacts"],
+        "contacts": contacts,
         "status": "new",
         "firm_profile": {
             "aum": None,
@@ -105,8 +183,8 @@ def to_dashboard_lead(result, idx):
             "asset_focus": [],
             "product_types": [],
             "bd_affiliated": None,
-            "independence": "unknown"
-        }
+            "independence": "unknown",
+        },
     }
 
 
@@ -125,7 +203,7 @@ def write_leads_json(results):
 
 
 # -----------------------
-# Main run function
+# Main run
 # -----------------------
 def run():
     universe = load_universe()
@@ -133,10 +211,12 @@ def run():
 
     results = []
 
-    for firm_name in universe[:200]:  # limit for MVP speed
+    for row in universe[:200]:
+        firm_name = row["firm"]
+        website = row.get("website", "")
         print(f"Scanning: {firm_name}")
 
-        signal = detect_signal_from_news(firm_name)
+        signal = detect_signal_from_news(firm_name, website)
 
         if signal:
             results.append(signal)
@@ -151,10 +231,10 @@ def run():
         print("No strong leads found.")
         return
 
-    for r in results:
-        print(f"{r['priority'].upper()} - {r['firm']}")
-        print(f"Trigger: {r['trigger']}")
-        print(f"Hook: {r['hook']}")
+    for result in results[:20]:
+        print(f"{result['priority'].upper()} - {result['firm']}")
+        print(f"Trigger: {result['trigger']}")
+        print(f"Hook: {result['hook']}")
         print("-" * 40)
 
 
