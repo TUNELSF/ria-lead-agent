@@ -3,11 +3,14 @@ name: Daily RIA Leads
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 13 * * *"  # runs daily at 13:00 UTC
+    - cron: "0 13 * * *"
 
 jobs:
   run:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repo
@@ -21,5 +24,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r src/src/requirements.txt
 
-      - name: Run script
+      - name: Run daily scan
         run: python src/src/main.py
+
+      - name: Commit updated leads JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/leads.json
+          git commit -m "Update leads JSON" || echo "No changes to commit"
+          git push
