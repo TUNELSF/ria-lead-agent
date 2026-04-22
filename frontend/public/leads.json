@@ -29,6 +29,34 @@
   },
   {
     "id": "2",
+    "firm": "DWP",
+    "priority": "high",
+    "signal_type": "product_launch",
+    "signal_category": "offering",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.marketwatch.com/press-release/digital-wealth-partners-adds-hbar-custody-through-anchorage-digital-57674c13",
+    "source_label": "marketwatch.com",
+    "source_date": "Tue, 24 Feb 2026 15:00:00 GMT",
+    "evidence": "nvolved in the creation of this content. Dallas, TEXAS, Feb. 24, 2026 (GLOBE NEWSWIRE) -- Digital Wealth Partners (DWP) announced today that Hedera (HBAR) ...",
+    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
+    "contacts": [
+      "Robert Rahaim, CFP\u00ae",
+      "Chief Investment Officer"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "3",
     "firm": "TWO PRIME INC.",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -56,17 +84,17 @@
     }
   },
   {
-    "id": "3",
+    "id": "4",
     "firm": "SUMMIT FINANCIAL WORKING WITH PEOPLE YOU TRUST",
     "priority": "medium",
     "signal_type": "etf_activity",
     "signal_category": "portfolio",
     "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
     "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
-    "source": "https://www.nasdaq.com/articles/how-many-ishares-bitcoin-trust-etf-shares-you-need-own-equivalent-1-bitcoin",
+    "source": "https://www.nasdaq.com/articles/heres-how-many-ishares-bitcoin-trust-etf-shares-youll-need-own-equivalent-1-bitcoin",
     "source_label": "nasdaq.com",
-    "source_date": "Thu, 12 Feb 2026 10:48:00 GMT",
-    "evidence": "How Many iShares Bitcoin Trust ETF Shares You Need to Own the Equivalent of 1 Bitcoin IBIT became the world\u2019s largest Bitcoin ETF over the past",
+    "source_date": "Thu, 05 Feb 2026 03:20:00 GMT",
+    "evidence": "Here's How Many iShares Bitcoin Trust ETF Shares You'll Need to Own the Equivalent of 1 Bitcoin Bitcoin just reached a 52-week low. There are advantage",
     "hook": "Saw the recent ETF or portfolio activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
     "contacts": [
       "Chief Investment Officer",
