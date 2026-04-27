@@ -1,34 +1,6 @@
 [
   {
     "id": "1",
-    "firm": "DWP",
-    "priority": "high",
-    "signal_type": "product_launch",
-    "signal_category": "offering",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.marketwatch.com/press-release/digital-wealth-partners-adds-hbar-custody-through-anchorage-digital-57674c13",
-    "source_label": "marketwatch.com",
-    "source_date": "Tue, 24 Feb 2026 15:00:00 GMT",
-    "evidence": "nvolved in the creation of this content. Dallas, TEXAS, Feb. 24, 2026 (GLOBE NEWSWIRE) -- Digital Wealth Partners (DWP) announced today that Hedera (HBAR) ...",
-    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "2",
     "firm": "TWO PRIME INC.",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -56,35 +28,7 @@
     }
   },
   {
-    "id": "3",
-    "firm": "ALONGSIDE, LLC",
-    "priority": "high",
-    "signal_type": "product_launch",
-    "signal_category": "offering",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.msn.com/en-us/money/other/broadridge-rolls-out-crypto-tokenized-asset-platform-for-canada-wealth-managers/ar-AA20Of9W",
-    "source_label": "msn.com",
-    "source_date": "Mon, 13 Apr 2026 14:51:59 GMT",
-    "evidence": "Broadridge rolls out crypto, tokenized asset platform for Canada wealth managers Broadridge Financial Solutions has launched a digital asset platfo",
-    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "4",
+    "id": "2",
     "firm": "MORGAN STANLEY",
     "priority": "medium",
     "signal_type": "etf_activity",
@@ -112,7 +56,7 @@
     }
   },
   {
-    "id": "5",
+    "id": "3",
     "firm": "SUMMIT FINANCIAL WORKING WITH PEOPLE YOU TRUST",
     "priority": "medium",
     "signal_type": "etf_activity",
