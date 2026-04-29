@@ -29,17 +29,17 @@
   },
   {
     "id": "2",
-    "firm": "ALONGSIDE, LLC",
-    "priority": "high",
-    "signal_type": "product_launch",
-    "signal_category": "offering",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.msn.com/en-us/money/other/broadridge-rolls-out-crypto-tokenized-asset-platform-for-canada-wealth-managers/ar-AA20Of9W",
-    "source_label": "msn.com",
-    "source_date": "Mon, 13 Apr 2026 14:51:59 GMT",
-    "evidence": "Broadridge rolls out crypto, tokenized asset platform for Canada wealth managers Broadridge Financial Solutions has launched a digital asset platfo",
-    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
+    "firm": "MORGAN STANLEY",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
+    "source": "https://www.fa-mag.com/news/goldman-s-bitcoin-etf-push-signals-wall-street-taming-of-crypto-86648.html",
+    "source_label": "fa-mag.com",
+    "source_date": "Wed, 15 Apr 2026 09:58:00 GMT",
+    "evidence": "Goldman's Bitcoin ETF Push Signals Wall Street Taming Of Crypto Wall Street firm to file for a bitcoin ETF\u2014joining Morgan Stanley, BlackRock Inc. and a growing roster of institutions",
+    "hook": "Saw the recent ETF or portfolio activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
     "contacts": [
       "Chief Investment Officer",
       "Managing Partner"
@@ -57,34 +57,6 @@
   },
   {
     "id": "3",
-    "firm": "MORGAN STANLEY",
-    "priority": "high",
-    "signal_type": "product_launch",
-    "signal_category": "offering",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.businesswire.com/news/home/20260316667499/en/Morgan-Stanley-Wealth-Management-Surpasses-$1-Trillion-in-Individual-Retirement-Account-Assets-Under-Management",
-    "source_label": "businesswire.com",
-    "source_date": "Tue, 17 Mar 2026 01:00:00 GMT",
-    "evidence": "Individual Retirement Account Assets Under Management NEW YORK--(BUSINESS WIRE)--Morgan Stanley Wealth Management today announced it surpassed $1 trillion in Individual Retirement Account (IRA) assets under management (AUM) 1. Since 2022, IRA assets",
-    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "4",
     "firm": "SUMMIT FINANCIAL WORKING WITH PEOPLE YOU TRUST",
     "priority": "medium",
     "signal_type": "etf_activity",
