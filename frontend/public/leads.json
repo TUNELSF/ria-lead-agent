@@ -29,20 +29,20 @@
   },
   {
     "id": "2",
-    "firm": "ONE WEALTH INVESTORS",
+    "firm": "NIHON GLOBAL GROWTH PARTNERS MANAGEMENT, INC.",
     "priority": "high",
     "signal_type": "crypto_signal",
     "signal_category": "general",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.dmagazine.com/sponsored/2025/11/digital-wealth-partners-crypto-custody-strategies/",
-    "source_label": "dmagazine.com",
-    "source_date": "Mon, 17 Nov 2025 21:00:00 GMT",
-    "evidence": "How One Dallas Entrepreneur Turned Crypto Chaos into a Billion-Dollar Opportunity Jake Claver and Max Avery spotted something most people missed. Wealthy investo",
+    "source": "https://www.forbes.com/sites/digital-assets/2026/02/28/caribbean-leaders-are-fueling-global-growth-of-digital-assets/",
+    "source_label": "forbes.com",
+    "source_date": "Sat, 28 Feb 2026 10:08:00 GMT",
+    "evidence": "Caribbean Leaders Are Fueling Global Growth Of Digital Assets Forbes contributors publish independent expert analyses and insights. I\u2019m Executive Director of Blockchain Foundation i",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
-      "Team Members",
-      "Chief Investment Officer"
+      "Chief Investment Officer",
+      "Managing Partner"
     ],
     "status": "new",
     "firm_profile": {
