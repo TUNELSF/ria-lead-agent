@@ -1,34 +1,6 @@
 [
   {
     "id": "1",
-    "firm": "DWP",
-    "priority": "high",
-    "signal_type": "product_launch",
-    "signal_category": "offering",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://markets.businessinsider.com/news/stocks/digital-wealth-partners-adds-hbar-custody-through-anchorage-digital-1035862646",
-    "source_label": "markets.businessinsider.com",
-    "source_date": "Tue, 24 Feb 2026 09:59:00 GMT",
-    "evidence": "s HBAR Custody Through Anchorage Digital Dallas, TEXAS, Feb. 24, 2026 (GLOBE NEWSWIRE) -- Digital Wealth Partners (DWP) announced today that Hedera (HBAR) custody is now available for DWP clients through its partnership with Anchorage ...",
-    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
-    "contacts": [
-      "Robert Rahaim, CFP\u00ae",
-      "Chief Investment Officer"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "2",
     "firm": "MORGAN STANLEY",
     "priority": "high",
     "signal_type": "product_launch",
@@ -56,7 +28,7 @@
     }
   },
   {
-    "id": "3",
+    "id": "2",
     "firm": "NIHON GLOBAL GROWTH PARTNERS MANAGEMENT, INC.",
     "priority": "high",
     "signal_type": "crypto_signal",
