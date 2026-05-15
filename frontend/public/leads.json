@@ -63,10 +63,10 @@
     "signal_category": "portfolio",
     "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
     "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
-    "source": "https://www.coindesk.com/markets/2026/05/05/self-directed-investors-power-bitcoin-etf-launch-despite-morgan-stanley-s-scale",
-    "source_label": "coindesk.com",
-    "source_date": "Tue, 05 May 2026 13:44:00 GMT",
-    "evidence": "estors power bitcoin ETF launch despite Morgan Stanley\u2019s scale Strong early demand highlights how investors are driving crypto adoption, even without support from Morgan Stanley\u2019s vast advisor network.",
+    "source": "https://www.msn.com/en-us/money/top-stocks/bitcoin-etf-three-reasons-morgan-stanley-s-msbt-could-overtake-blackrock-s-ibit-btc-etf/ar-AA21M7JK",
+    "source_label": "msn.com",
+    "source_date": "Sun, 26 Apr 2026 10:45:27 GMT",
+    "evidence": "Bitcoin ETF: Three reasons Morgan Stanley\u2019s MSBT could overtake BlackRock\u2019s IBIT BTC ETF Quick Read MSBT charges 0.14%, the low",
     "hook": "Saw the recent ETF or portfolio activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
     "contacts": [
       "Chief Investment Officer",
@@ -113,34 +113,6 @@
   },
   {
     "id": "5",
-    "firm": "NIHON GLOBAL GROWTH PARTNERS MANAGEMENT, INC.",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.forbes.com/sites/digital-assets/2026/02/28/caribbean-leaders-are-fueling-global-growth-of-digital-assets/",
-    "source_label": "forbes.com",
-    "source_date": "Sat, 28 Feb 2026 10:12:00 GMT",
-    "evidence": "Caribbean Leaders Are Fueling Global Growth Of Digital Assets Forbes contributors publish independent expert analyses and insights. I\u2019m Executive Director of Blockchain Foundation i",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "6",
     "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
     "priority": "high",
     "signal_type": "product_launch",
@@ -168,21 +140,21 @@
     }
   },
   {
-    "id": "7",
-    "firm": "ONE WEALTH INVESTORS",
+    "id": "6",
+    "firm": "NIHON GLOBAL GROWTH PARTNERS MANAGEMENT, INC.",
     "priority": "high",
     "signal_type": "crypto_signal",
     "signal_category": "general",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.dmagazine.com/sponsored/2025/11/digital-wealth-partners-crypto-custody-strategies/",
-    "source_label": "dmagazine.com",
-    "source_date": "Mon, 17 Nov 2025 21:00:00 GMT",
-    "evidence": "How One Dallas Entrepreneur Turned Crypto Chaos into a Billion-Dollar Opportunity Jake Claver and Max Avery spotted something most people missed. Wealthy investo",
+    "source": "https://www.forbes.com/sites/digital-assets/2026/02/28/caribbean-leaders-are-fueling-global-growth-of-digital-assets/",
+    "source_label": "forbes.com",
+    "source_date": "Sat, 28 Feb 2026 10:12:00 GMT",
+    "evidence": "Caribbean Leaders Are Fueling Global Growth Of Digital Assets Forbes contributors publish independent expert analyses and insights. I\u2019m Executive Director of Blockchain Foundation i",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
-      "Team Members",
-      "Vishail Singh"
+      "Chief Investment Officer",
+      "Managing Partner"
     ],
     "status": "new",
     "firm_profile": {
