@@ -85,34 +85,6 @@
   },
   {
     "id": "4",
-    "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
-    "priority": "high",
-    "signal_type": "product_launch",
-    "signal_category": "offering",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.tmcnet.com/usubmit/2026/05/12/10380777.htm",
-    "source_label": "tmcnet.com",
-    "source_date": "Tue, 12 May 2026 04:26:00 GMT",
-    "evidence": "Prometheum Capital Launches Digital Brokerage Solutions, Enabling Broker-Dealers to Offer Crypto Assets Through Traditional Brokerage Accounts Prometheum Inc. (\"Prometheum\"), a market infrastructure provider for cryp",
-    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
-    "contacts": [
-      "Leadership Team",
-      "Peter Gray"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "5",
     "firm": "NIHON GLOBAL GROWTH PARTNERS MANAGEMENT, INC.",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -127,6 +99,34 @@
     "contacts": [
       "Chief Investment Officer",
       "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "5",
+    "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
+    "priority": "high",
+    "signal_type": "product_launch",
+    "signal_category": "offering",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.tmcnet.com/usubmit/2026/05/12/10380777.htm",
+    "source_label": "tmcnet.com",
+    "source_date": "Tue, 12 May 2026 04:26:00 GMT",
+    "evidence": "Prometheum Capital Launches Digital Brokerage Solutions, Enabling Broker-Dealers to Offer Crypto Assets Through Traditional Brokerage Accounts Prometheum Inc. (\"Prometheum\"), a market infrastructure provider for cryp",
+    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
+    "contacts": [
+      "Leadership Team",
+      "Peter Gray"
     ],
     "status": "new",
     "firm_profile": {
