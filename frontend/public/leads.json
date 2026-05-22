@@ -57,34 +57,6 @@
   },
   {
     "id": "3",
-    "firm": "NIHON GLOBAL GROWTH PARTNERS MANAGEMENT, INC.",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.forbes.com/sites/digital-assets/2026/02/28/caribbean-leaders-are-fueling-global-growth-of-digital-assets/",
-    "source_label": "forbes.com",
-    "source_date": "Sat, 28 Feb 2026 10:12:00 GMT",
-    "evidence": "Caribbean Leaders Are Fueling Global Growth Of Digital Assets Forbes contributors publish independent expert analyses and insights. I\u2019m Executive Director of Blockchain Foundation i",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "4",
     "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
     "priority": "high",
     "signal_type": "product_launch",
@@ -99,6 +71,34 @@
     "contacts": [
       "Leadership Team",
       "Peter Gray"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "4",
+    "firm": "NIHON GLOBAL GROWTH PARTNERS MANAGEMENT, INC.",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.forbes.com/sites/digital-assets/2026/02/28/caribbean-leaders-are-fueling-global-growth-of-digital-assets/",
+    "source_label": "forbes.com",
+    "source_date": "Sat, 28 Feb 2026 10:12:00 GMT",
+    "evidence": "Caribbean Leaders Are Fueling Global Growth Of Digital Assets Forbes contributors publish independent expert analyses and insights. I\u2019m Executive Director of Blockchain Foundation i",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
     ],
     "status": "new",
     "firm_profile": {
