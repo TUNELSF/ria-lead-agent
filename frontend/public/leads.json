@@ -54,33 +54,5 @@
       "bd_affiliated": null,
       "independence": "unknown"
     }
-  },
-  {
-    "id": "3",
-    "firm": "NEW YORK CITY INVESTMENT FUND MANAGER, INC.",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://cointelegraph.com/news/abra-nasdaq-spac-new-providence-crypto-wealth-manager-public-listing",
-    "source_label": "cointelegraph.com",
-    "source_date": "Sun, 15 Mar 2026 17:00:00 GMT",
-    "evidence": "Abra targets Nasdaq listing in $750M deal with New Providence SPAC Crypto wealth manager Abra plans a Nasdaq debut through a SPAC merger, joining a growing wave of digital asset companies tappi",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Our Board",
-      "One Battery Park Plaza"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
   }
 ]
