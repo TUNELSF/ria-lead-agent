@@ -29,6 +29,34 @@
   },
   {
     "id": "2",
+    "firm": "NEW YORK CITY INVESTMENT FUND MANAGER, INC.",
+    "priority": "high",
+    "signal_type": "product_launch",
+    "signal_category": "offering",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.businesswire.com/news/home/20260316667499/en/Morgan-Stanley-Wealth-Management-Surpasses-$1-Trillion-in-Individual-Retirement-Account-Assets-Under-Management",
+    "source_label": "businesswire.com",
+    "source_date": "Tue, 17 Mar 2026 01:00:00 GMT",
+    "evidence": "Individual Retirement Account Assets Under Management NEW YORK--(BUSINESS WIRE)--Morgan Stanley Wealth Management today announced it surpassed $1 trillion in Individual Retirement Account (IRA) assets under management (AUM) 1. Since 2022, IRA assets",
+    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
+    "contacts": [
+      "Our Board",
+      "One Battery Park Plaza"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "3",
     "firm": "WEBBRIDGE GLOBAL FOUNDATION",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -37,7 +65,7 @@
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
     "source": "https://www.forbes.com/sites/digital-assets/2026/02/28/caribbean-leaders-are-fueling-global-growth-of-digital-assets/",
     "source_label": "forbes.com",
-    "source_date": "Sat, 28 Feb 2026 10:12:00 GMT",
+    "source_date": "Sat, 28 Feb 2026 10:08:00 GMT",
     "evidence": "Caribbean Leaders Are Fueling Global Growth Of Digital Assets Forbes contributors publish independent expert analyses and insights. I\u2019m Executive Director of Blockchain Foundation i",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
