@@ -1,16 +1,44 @@
 [
   {
     "id": "1",
-    "firm": "ON-CHAIN SYSTEMATIC TRADING, INC.",
+    "firm": "THE CAPITAL ADVISORY GROUP ADVISORY SERVICES, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
     "signal_category": "general",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.nasdaq.com/press-release/abra-digital-asset-wealth-management-platform-become-public-company-business",
-    "source_label": "nasdaq.com",
-    "source_date": "Mon, 16 Mar 2026 04:01:00 GMT",
-    "evidence": "Abra, a Digital Asset Wealth Management Platform, to Become a Public Company via Business Combination With New Providence Acquisition Corp. I",
+    "source": "https://www.morningstar.com/news/business-wire/20260427657597/digital-ascension-group-expands-c-suite-to-deepen-its-lead-in-end-to-end-digital-asset-wealth-management",
+    "source_label": "morningstar.com",
+    "source_date": "Sun, 26 Apr 2026 23:00:00 GMT",
+    "evidence": "Digital Ascension Group Expands C-Suite to Deepen Its Lead in End-to-End Digital Asset Wealth Management New executives from Goldman Sachs, Grayscale, BlackRock, and U.S. Bank reinforce the firm's focus on",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Investment Process",
+      "Brett Machtig"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "2",
+    "firm": "BRYN MAWR TRUST ADVISORS, LLC",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.wealthmanagement.com/estate-planning/advisors-can-t-ignore-this-asset-class-today-",
+    "source_label": "wealthmanagement.com",
+    "source_date": "Tue, 30 Jun 2026 15:04:00 GMT",
+    "evidence": "sors Can't Ignore This Asset Class Today! According to a recent Bryn Mawr Trust survey, the average person values their digital assets, everything from bank apps and loyalty points to business accounts and family photos, at nearly $200,000, ...",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
       "Chief Investment Officer",
@@ -28,8 +56,64 @@
     }
   },
   {
-    "id": "2",
-    "firm": "WEBBRIDGE GLOBAL FOUNDATION",
+    "id": "3",
+    "firm": "MEASURED RISK PORTFOLIOS",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://tokenist.com/blackrock-bitcoin-allocation-advisor-portfolios/",
+    "source_label": "tokenist.com",
+    "source_date": "Wed, 24 Jun 2026 02:17:00 GMT",
+    "evidence": "BlackRock Sets 1\u20132% Bitcoin Risk Budget for Advisor Portfolios BlackRock is back in the news as the world's largest asset manager advises a 1-2% Bi",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "4",
+    "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.assetservicingtimes.com/specialistfeatures/specialistfeature.php?specialist_id=702",
+    "source_label": "assetservicingtimes.com",
+    "source_date": "Tue, 28 Apr 2026 17:00:00 GMT",
+    "evidence": "ital assets For much of the past decade, digital asset custody has been built outside the traditional financial system. Crypto-native firms developed the infrastructure required to safeguard private keys and ...",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Leadership Team",
+      "Peter Gray"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "5",
+    "firm": "NIHON GLOBAL GROWTH PARTNERS MANAGEMENT, INC.",
     "priority": "high",
     "signal_type": "crypto_signal",
     "signal_category": "general",
@@ -40,6 +124,62 @@
     "source_date": "Sat, 28 Feb 2026 10:08:00 GMT",
     "evidence": "Caribbean Leaders Are Fueling Global Growth Of Digital Assets Forbes contributors publish independent expert analyses and insights. I\u2019m Executive Director of Blockchain Foundation i",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "6",
+    "firm": "CENTRAL TRUST BANK",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://cointelegraph.com/learn/why-central-banks-prefer-gold-over-crypto-assets",
+    "source_label": "cointelegraph.com",
+    "source_date": "Thu, 21 May 2026 17:00:00 GMT",
+    "evidence": "tal finance, yet gold remains the dominant reserve asset. Several factors continue to limit institutional confidence in crypto. Central banks are testing ...",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "7",
+    "firm": "MORGAN STANLEY",
+    "priority": "high",
+    "signal_type": "product_launch",
+    "signal_category": "offering",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.morningstar.com/news/business-wire/20260605548390/morgan-stanley-wealth-management-and-galaxy-digital-announce-referral-capability-for-in-kind-creation-of-spot-crypto-etp-shares",
+    "source_label": "morningstar.com",
+    "source_date": "Thu, 04 Jun 2026 22:30:00 GMT",
+    "evidence": "Morgan Stanley Wealth Management and Galaxy Digital Announce Referral Capability for In-Kind Creation of Spot Crypto ETP Shares Morgan Stanley Wealth Management today announced a new referral arrangement with Galaxy Digital (\u201cGalaxy\u201d) t",
+    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
     "contacts": [
       "Chief Investment Officer",
       "Managing Partner"
