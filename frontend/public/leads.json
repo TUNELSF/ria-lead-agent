@@ -113,6 +113,34 @@
   },
   {
     "id": "5",
+    "firm": "BEST INVEST",
+    "priority": "medium",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
+    "source": "https://www.fool.com/investing/stock-market/market-sectors/financials/cryptocurrency-stocks/bitcoin-etfs/",
+    "source_label": "fool.com",
+    "source_date": "Thu, 18 Jun 2026 00:01:00 GMT",
+    "evidence": "5 Best Bitcoin ETFs for 2026 and How to Invest Grayscale has multiple Bitcoin ETFs, but in this case, bigger isn't better. The Graysca",
+    "hook": "Saw the recent alternatives-related signal \u2014 curious whether digital assets are starting to enter those portfolio conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "6",
     "firm": "SECOND HALF FINANCIAL PARTNERS, LLC",
     "priority": "medium",
     "signal_type": "crypto_signal",
@@ -140,7 +168,7 @@
     }
   },
   {
-    "id": "6",
+    "id": "7",
     "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -168,7 +196,7 @@
     }
   },
   {
-    "id": "7",
+    "id": "8",
     "firm": "CENTRAL TRUST BANK",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -179,6 +207,34 @@
     "source_label": "cointelegraph.com",
     "source_date": "Thu, 21 May 2026 17:00:00 GMT",
     "evidence": "tal finance, yet gold remains the dominant reserve asset. Several factors continue to limit institutional confidence in crypto. Central banks are testing ...",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "9",
+    "firm": "FIRST EAGLE SEPARATE ACCOUNT MANAGEMENT, LLC",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.investmentnews.com/independent-broker-dealers/crypto-has-arrived-in-the-brokerage-account-but-what-does-it-mean-for-advisors/266759",
+    "source_label": "investmentnews.com",
+    "source_date": "Tue, 26 May 2026 16:59:00 GMT",
+    "evidence": "Crypto has arrived in the brokerage account but what does it mean for advisors? Prometheum Capital, the SEC-registered crypto",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
       "Chief Investment Officer",
