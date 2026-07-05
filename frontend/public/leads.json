@@ -85,16 +85,16 @@
   },
   {
     "id": "4",
-    "firm": "MEASURED RISK PORTFOLIOS",
+    "firm": "BEST INVEST",
     "priority": "high",
     "signal_type": "crypto_signal",
     "signal_category": "general",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://tokenist.com/blackrock-bitcoin-allocation-advisor-portfolios/",
-    "source_label": "tokenist.com",
-    "source_date": "Wed, 24 Jun 2026 02:17:00 GMT",
-    "evidence": "BlackRock Sets 1\u20132% Bitcoin Risk Budget for Advisor Portfolios BlackRock is back in the news as the world's largest asset manager advises a 1-2% Bi",
+    "source": "https://www.fool.com/investing/stock-market/market-sectors/financials/cryptocurrency-stocks/bitcoin-etfs/",
+    "source_label": "fool.com",
+    "source_date": "Mon, 15 Jun 2026 09:56:00 GMT",
+    "evidence": "rading in January 2024. It has an annual expense ratio of 0.25%. Fidelity also uses its own custodial service, Fidelity Digital Assets, for Bitcoin ...",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
       "Chief Investment Officer",
@@ -113,34 +113,6 @@
   },
   {
     "id": "5",
-    "firm": "BEST INVEST",
-    "priority": "medium",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
-    "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
-    "source": "https://www.fool.com/investing/stock-market/market-sectors/financials/cryptocurrency-stocks/bitcoin-etfs/",
-    "source_label": "fool.com",
-    "source_date": "Thu, 18 Jun 2026 00:01:00 GMT",
-    "evidence": "5 Best Bitcoin ETFs for 2026 and How to Invest Grayscale has multiple Bitcoin ETFs, but in this case, bigger isn't better. The Graysca",
-    "hook": "Saw the recent alternatives-related signal \u2014 curious whether digital assets are starting to enter those portfolio conversations.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "6",
     "firm": "SECOND HALF FINANCIAL PARTNERS, LLC",
     "priority": "medium",
     "signal_type": "crypto_signal",
@@ -149,7 +121,7 @@
     "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
     "source": "https://247wallst.com/investing/cryptocurrency/2026/07/02/bitcoin-price-prediction-for-july-2026/",
     "source_label": "247wallst.com",
-    "source_date": "Thu, 02 Jul 2026 06:34:00 GMT",
+    "source_date": "Thu, 02 Jul 2026 02:34:00 GMT",
     "evidence": "Bitcoin Price Prediction for July 2026 Bitcoin begins the second half near $60,000 after a fresh 21-month low. Here's our July",
     "hook": "Saw the recent alternatives-related signal \u2014 curious whether digital assets are starting to enter those portfolio conversations.",
     "contacts": [
@@ -168,7 +140,7 @@
     }
   },
   {
-    "id": "7",
+    "id": "6",
     "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -196,7 +168,7 @@
     }
   },
   {
-    "id": "8",
+    "id": "7",
     "firm": "CENTRAL TRUST BANK",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -224,7 +196,7 @@
     }
   },
   {
-    "id": "9",
+    "id": "8",
     "firm": "FIRST EAGLE SEPARATE ACCOUNT MANAGEMENT, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
