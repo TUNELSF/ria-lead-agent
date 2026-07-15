@@ -1,34 +1,6 @@
 [
   {
     "id": "1",
-    "firm": "DWP",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.consumeraffairs.com/finance/digital-wealth-partners.html",
-    "source_label": "consumeraffairs.com",
-    "source_date": "Sun, 12 Jul 2026 09:28:00 GMT",
-    "evidence": "alth Partners Reviews Digital Wealth Partners (DWP) is a U.S.-based registered investment advisor (RIA) specializing in digital assets, including cryptocurrencies and blockchain-based alternatives. It provides customized ...",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Robert Rahaim, CFP\u00ae",
-      "Chief Investment Officer"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "2",
     "firm": "MORGAN STANLEY",
     "priority": "high",
     "signal_type": "product_launch",
@@ -56,7 +28,63 @@
     }
   },
   {
+    "id": "2",
+    "firm": "DWP",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.consumeraffairs.com/finance/digital-wealth-partners.html",
+    "source_label": "consumeraffairs.com",
+    "source_date": "Wed, 08 Jul 2026 17:00:00 GMT",
+    "evidence": "alth Partners Reviews Digital Wealth Partners (DWP) is a U.S.-based registered investment advisor (RIA) specializing in digital assets, including cryptocurrencies and blockchain-based alternatives. It provides customized ...",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Robert Rahaim, CFP\u00ae",
+      "Chief Investment Officer"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
     "id": "3",
+    "firm": "THE CAPITAL ADVISORY GROUP ADVISORY SERVICES, LLC",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.morningstar.com/news/business-wire/20260427657597/digital-ascension-group-expands-c-suite-to-deepen-its-lead-in-end-to-end-digital-asset-wealth-management",
+    "source_label": "morningstar.com",
+    "source_date": "Sun, 26 Apr 2026 23:00:00 GMT",
+    "evidence": "Digital Ascension Group Expands C-Suite to Deepen Its Lead in End-to-End Digital Asset Wealth Management New executives from Goldman Sachs, Grayscale, BlackRock, and U.S. Bank reinforce the firm's focus on",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Investment Process",
+      "Brett Machtig"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "4",
     "firm": "A SMARTER WAY TO INVEST",
     "priority": "medium",
     "signal_type": "etf_activity",
@@ -84,7 +112,7 @@
     }
   },
   {
-    "id": "4",
+    "id": "5",
     "firm": "BEST INVEST",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -93,7 +121,7 @@
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
     "source": "https://www.fool.com/investing/stock-market/market-sectors/financials/cryptocurrency-stocks/bitcoin-etfs/",
     "source_label": "fool.com",
-    "source_date": "Thu, 18 Jun 2026 00:01:00 GMT",
+    "source_date": "Mon, 15 Jun 2026 09:56:00 GMT",
     "evidence": "rading in January 2024. It has an annual expense ratio of 0.25%. Fidelity also uses its own custodial service, Fidelity Digital Assets, for Bitcoin ...",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
@@ -112,7 +140,7 @@
     }
   },
   {
-    "id": "5",
+    "id": "6",
     "firm": "ONE STONE GLOBAL LLC",
     "priority": "high",
     "signal_type": "product_launch",
@@ -121,7 +149,7 @@
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
     "source": "https://finance.yahoo.com/technology/ai/articles/coinbase-coin-launches-sec-registered-235905636.html",
     "source_label": "finance.yahoo.com",
-    "source_date": "Fri, 19 Jun 2026 17:26:00 GMT",
+    "source_date": "Fri, 19 Jun 2026 16:59:00 GMT",
     "evidence": "Coinbase (COIN) Launches SEC-Registered AI Investment Advisor for Coinbase One Subscribers Coinbase Global Inc. (NASDAQ:COIN) is one of the best",
     "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
     "contacts": [
@@ -140,7 +168,7 @@
     }
   },
   {
-    "id": "6",
+    "id": "7",
     "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -168,7 +196,35 @@
     }
   },
   {
-    "id": "7",
+    "id": "8",
+    "firm": "CENTRAL TRUST BANK",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://cointelegraph.com/learn/why-central-banks-prefer-gold-over-crypto-assets",
+    "source_label": "cointelegraph.com",
+    "source_date": "Thu, 21 May 2026 17:00:00 GMT",
+    "evidence": "tal finance, yet gold remains the dominant reserve asset. Several factors continue to limit institutional confidence in crypto. Central banks are testing ...",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "9",
     "firm": "FIRST EAGLE SEPARATE ACCOUNT MANAGEMENT, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -177,7 +233,7 @@
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
     "source": "https://www.investmentnews.com/independent-broker-dealers/crypto-has-arrived-in-the-brokerage-account-but-what-does-it-mean-for-advisors/266759",
     "source_label": "investmentnews.com",
-    "source_date": "Tue, 26 May 2026 16:59:00 GMT",
+    "source_date": "Tue, 26 May 2026 23:12:00 GMT",
     "evidence": "Crypto has arrived in the brokerage account but what does it mean for advisors? Prometheum Capital, the SEC-registered crypto",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
