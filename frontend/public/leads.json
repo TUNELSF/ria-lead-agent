@@ -1,34 +1,6 @@
 [
   {
     "id": "1",
-    "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.americanbanker.com/leaders/blockchains-second-wave-is-here",
-    "source_label": "americanbanker.com",
-    "source_date": "Fri, 17 Jul 2026 11:01:00 GMT",
-    "evidence": "Blockchain's second wave is here The first wave focused on crypto assets and cryptocurrencies. The second, current wave focuses on stablecoins and the infrastructure creation. And the t",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Leadership Team",
-      "Peter Gray"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "2",
     "firm": "DWP",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -43,6 +15,34 @@
     "contacts": [
       "Robert Rahaim, CFP\u00ae",
       "Chief Investment Officer"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "2",
+    "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.americanbanker.com/leaders/blockchains-second-wave-is-here",
+    "source_label": "americanbanker.com",
+    "source_date": "Fri, 17 Jul 2026 11:01:00 GMT",
+    "evidence": "Blockchain's second wave is here The first wave focused on crypto assets and cryptocurrencies. The second, current wave focuses on stablecoins and the infrastructure creation. And the t",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Leadership Team",
+      "Peter Gray"
     ],
     "status": "new",
     "firm_profile": {
@@ -113,16 +113,16 @@
   },
   {
     "id": "5",
-    "firm": "MORGAN STANLEY",
+    "firm": "ONE STONE GLOBAL LLC",
     "priority": "high",
     "signal_type": "product_launch",
     "signal_category": "offering",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.morningstar.com/news/business-wire/20260605548390/morgan-stanley-wealth-management-and-galaxy-digital-announce-referral-capability-for-in-kind-creation-of-spot-crypto-etp-shares",
-    "source_label": "morningstar.com",
-    "source_date": "Thu, 04 Jun 2026 22:30:00 GMT",
-    "evidence": "Morgan Stanley Wealth Management and Galaxy Digital Announce Referral Capability for In-Kind Creation of Spot Crypto ETP Shares Morgan Stanley Wealth Management today announced a new referral arrangement with Galaxy Digital (\u201cGalaxy\u201d) t",
+    "source": "https://finance.yahoo.com/technology/ai/articles/coinbase-coin-launches-sec-registered-235905636.html",
+    "source_label": "finance.yahoo.com",
+    "source_date": "Fri, 19 Jun 2026 16:59:00 GMT",
+    "evidence": "Coinbase (COIN) Launches SEC-Registered AI Investment Advisor for Coinbase One Subscribers Coinbase Global Inc. (NASDAQ:COIN) is one of the best",
     "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
     "contacts": [
       "Chief Investment Officer",
@@ -141,16 +141,16 @@
   },
   {
     "id": "6",
-    "firm": "ONE STONE GLOBAL LLC",
+    "firm": "MORGAN STANLEY",
     "priority": "high",
     "signal_type": "product_launch",
     "signal_category": "offering",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://finance.yahoo.com/technology/ai/articles/coinbase-coin-launches-sec-registered-235905636.html",
-    "source_label": "finance.yahoo.com",
-    "source_date": "Fri, 19 Jun 2026 16:59:00 GMT",
-    "evidence": "Coinbase (COIN) Launches SEC-Registered AI Investment Advisor for Coinbase One Subscribers Coinbase Global Inc. (NASDAQ:COIN) is one of the best",
+    "source": "https://www.morningstar.com/news/business-wire/20260605548390/morgan-stanley-wealth-management-and-galaxy-digital-announce-referral-capability-for-in-kind-creation-of-spot-crypto-etp-shares",
+    "source_label": "morningstar.com",
+    "source_date": "Thu, 04 Jun 2026 22:30:00 GMT",
+    "evidence": "Morgan Stanley Wealth Management and Galaxy Digital Announce Referral Capability for In-Kind Creation of Spot Crypto ETP Shares Morgan Stanley Wealth Management today announced a new referral arrangement with Galaxy Digital (\u201cGalaxy\u201d) t",
     "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
     "contacts": [
       "Chief Investment Officer",
