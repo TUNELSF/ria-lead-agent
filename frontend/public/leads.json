@@ -9,7 +9,7 @@
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
     "source": "https://www.consumeraffairs.com/finance/digital-wealth-partners.html",
     "source_label": "consumeraffairs.com",
-    "source_date": "Mon, 29 Jun 2026 17:01:00 GMT",
+    "source_date": "Wed, 08 Jul 2026 17:00:00 GMT",
     "evidence": "alth Partners Reviews Digital Wealth Partners (DWP) is a U.S.-based registered investment advisor (RIA) specializing in digital assets, including cryptocurrencies and blockchain-based alternatives. It provides customized ...",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
@@ -29,34 +29,6 @@
   },
   {
     "id": "2",
-    "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.americanbanker.com/leaders/blockchains-second-wave-is-here",
-    "source_label": "americanbanker.com",
-    "source_date": "Fri, 17 Jul 2026 11:01:00 GMT",
-    "evidence": "Blockchain's second wave is here The first wave focused on crypto assets and cryptocurrencies. The second, current wave focuses on stablecoins and the infrastructure creation. And the t",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Leadership Team",
-      "Peter Gray"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "3",
     "firm": "THE CAPITAL ADVISORY GROUP ADVISORY SERVICES, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -84,7 +56,91 @@
     }
   },
   {
+    "id": "3",
+    "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.americanbanker.com/leaders/blockchains-second-wave-is-here",
+    "source_label": "americanbanker.com",
+    "source_date": "Fri, 17 Jul 2026 11:01:00 GMT",
+    "evidence": "Blockchain's second wave is here The first wave focused on crypto assets and cryptocurrencies. The second, current wave focuses on stablecoins and the infrastructure creation. And the t",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Leadership Team",
+      "Peter Gray"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
     "id": "4",
+    "firm": "MORGAN STANLEY",
+    "priority": "high",
+    "signal_type": "product_launch",
+    "signal_category": "offering",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.businesswire.com/news/home/20260316667499/en/Morgan-Stanley-Wealth-Management-Surpasses-$1-Trillion-in-Individual-Retirement-Account-Assets-Under-Management",
+    "source_label": "businesswire.com",
+    "source_date": "Tue, 17 Mar 2026 01:00:00 GMT",
+    "evidence": "Individual Retirement Account Assets Under Management NEW YORK--(BUSINESS WIRE)--Morgan Stanley Wealth Management today announced it surpassed $1 trillion in Individual Retirement Account (IRA) assets under management (AUM) 1. Since 2022, IRA assets",
+    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "5",
+    "firm": "WORLD EQUITY GROUP, INC.",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.finextra.com/blogposting/32242/real-world-asset-tokenization-the-next-trillion-dollar-fintech-opportunity",
+    "source_label": "finextra.com",
+    "source_date": "Fri, 10 Jul 2026 02:52:00 GMT",
+    "evidence": "Real-World Asset Tokenization: The Next Trillion-Dollar Fintech Opportunity For decades, financial markets have kept leaning on more traditional setu",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "6",
     "firm": "A SMARTER WAY TO INVEST",
     "priority": "medium",
     "signal_type": "etf_activity",
@@ -112,7 +168,7 @@
     }
   },
   {
-    "id": "5",
+    "id": "7",
     "firm": "ONE STONE GLOBAL LLC",
     "priority": "high",
     "signal_type": "product_launch",
@@ -123,34 +179,6 @@
     "source_label": "finance.yahoo.com",
     "source_date": "Fri, 19 Jun 2026 16:59:00 GMT",
     "evidence": "Coinbase (COIN) Launches SEC-Registered AI Investment Advisor for Coinbase One Subscribers Coinbase Global Inc. (NASDAQ:COIN) is one of the best",
-    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "6",
-    "firm": "MORGAN STANLEY",
-    "priority": "high",
-    "signal_type": "product_launch",
-    "signal_category": "offering",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.morningstar.com/news/business-wire/20260605548390/morgan-stanley-wealth-management-and-galaxy-digital-announce-referral-capability-for-in-kind-creation-of-spot-crypto-etp-shares",
-    "source_label": "morningstar.com",
-    "source_date": "Thu, 04 Jun 2026 22:30:00 GMT",
-    "evidence": "Morgan Stanley Wealth Management and Galaxy Digital Announce Referral Capability for In-Kind Creation of Spot Crypto ETP Shares Morgan Stanley Wealth Management today announced a new referral arrangement with Galaxy Digital (\u201cGalaxy\u201d) t",
     "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
     "contacts": [
       "Chief Investment Officer",
