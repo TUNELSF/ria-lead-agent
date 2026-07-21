@@ -57,34 +57,6 @@
   },
   {
     "id": "3",
-    "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.americanbanker.com/leaders/blockchains-second-wave-is-here",
-    "source_label": "americanbanker.com",
-    "source_date": "Fri, 17 Jul 2026 11:01:00 GMT",
-    "evidence": "Blockchain's second wave is here The first wave focused on crypto assets and cryptocurrencies. The second, current wave focuses on stablecoins and the infrastructure creation. And the t",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Leadership Team",
-      "Peter Gray"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "4",
     "firm": "MORGAN STANLEY",
     "priority": "high",
     "signal_type": "product_launch",
@@ -112,35 +84,7 @@
     }
   },
   {
-    "id": "5",
-    "firm": "WORLD EQUITY GROUP, INC.",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.finextra.com/blogposting/32242/real-world-asset-tokenization-the-next-trillion-dollar-fintech-opportunity",
-    "source_label": "finextra.com",
-    "source_date": "Fri, 10 Jul 2026 02:52:00 GMT",
-    "evidence": "Real-World Asset Tokenization: The Next Trillion-Dollar Fintech Opportunity For decades, financial markets have kept leaning on more traditional setu",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "6",
+    "id": "4",
     "firm": "A SMARTER WAY TO INVEST",
     "priority": "medium",
     "signal_type": "etf_activity",
@@ -168,7 +112,7 @@
     }
   },
   {
-    "id": "7",
+    "id": "5",
     "firm": "ONE STONE GLOBAL LLC",
     "priority": "high",
     "signal_type": "product_launch",
