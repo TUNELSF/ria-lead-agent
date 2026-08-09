@@ -69,8 +69,8 @@
     "evidence": "alth Partners Reviews Digital Wealth Partners (DWP) is a U.S.-based registered investment advisor (RIA) specializing in digital assets, including cryptocurrencies and blockchain-based alternatives. It provides customized ...",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
+      "Robert Rahaim, CFP\u00ae",
+      "Chief Investment Officer"
     ],
     "status": "new",
     "firm_profile": {
@@ -87,15 +87,15 @@
     "id": "4",
     "firm": "MORGAN STANLEY",
     "priority": "high",
-    "signal_type": "product_launch",
-    "signal_category": "offering",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.morningstar.com/news/business-wire/20260605548390/morgan-stanley-wealth-management-and-galaxy-digital-announce-referral-capability-for-in-kind-creation-of-spot-crypto-etp-shares",
-    "source_label": "morningstar.com",
-    "source_date": "Thu, 04 Jun 2026 22:30:00 GMT",
-    "evidence": "Morgan Stanley Wealth Management and Galaxy Digital Announce Referral Capability for In-Kind Creation of Spot Crypto ETP Shares Morgan Stanley Wealth Management today announced a new referral arrangement with Galaxy Digital (\u201cGalaxy\u201d) t",
-    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
+    "source": "https://bitcoinmagazine.com/news/morgan-stanley-bitcoin-executive-education",
+    "source_label": "bitcoinmagazine.com",
+    "source_date": "Wed, 10 Jun 2026 10:46:00 GMT",
+    "evidence": "gan Stanley\u2019s Bitcoin Executive Says Education \u2014 Not Products \u2014 Is Wall Street\u2019s Real Obstacle Morgan Stanley's Head of Digital Asset Strategy Amy Oldenburg says Bitcoin's biggest barrier to mainstream adoption is not product availability but investor a",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
       "Chief Investment Officer",
       "Managing Partner"
@@ -155,34 +155,6 @@
     "contacts": [
       "Chief Investment Officer",
       "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "7",
-    "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.assetservicingtimes.com/specialistfeatures/specialistfeature.php?specialist_id=702",
-    "source_label": "assetservicingtimes.com",
-    "source_date": "Tue, 28 Apr 2026 17:00:00 GMT",
-    "evidence": "ital assets For much of the past decade, digital asset custody has been built outside the traditional financial system. Crypto-native firms developed the infrastructure required to safeguard private keys and ...",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Leadership Team",
-      "Peter Gray"
     ],
     "status": "new",
     "firm_profile": {
