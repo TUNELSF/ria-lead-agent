@@ -29,6 +29,34 @@
   },
   {
     "id": "2",
+    "firm": "THE CAPITAL ADVISORY GROUP ADVISORY SERVICES, LLC",
+    "priority": "high",
+    "signal_type": "product_launch",
+    "signal_category": "offering",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://markets.businessinsider.com/news/stocks/digital-ascension-group-expands-platform-to-unify-investment-management-estate-planning-and-digital-asset-strategy-1036351574",
+    "source_label": "markets.businessinsider.com",
+    "source_date": "Wed, 22 Jul 2026 03:00:00 GMT",
+    "evidence": "Digital Ascension Group Expands Platform to Unify Investment Management, Estate Planning, and Digital Asset Strategy Digital Ascension Group (DAG) today announced that its SEC Registered Investment Advisor subsidiary, Digital W",
+    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
+    "contacts": [
+      "Investment Process",
+      "Brett Machtig"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "3",
     "firm": "DWP",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -56,34 +84,6 @@
     }
   },
   {
-    "id": "3",
-    "firm": "THE CAPITAL ADVISORY GROUP ADVISORY SERVICES, LLC",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.morningstar.com/news/business-wire/20260427657597/digital-ascension-group-expands-c-suite-to-deepen-its-lead-in-end-to-end-digital-asset-wealth-management",
-    "source_label": "morningstar.com",
-    "source_date": "Sun, 26 Apr 2026 23:00:00 GMT",
-    "evidence": "Digital Ascension Group Expands C-Suite to Deepen Its Lead in End-to-End Digital Asset Wealth Management New executives from Goldman Sachs, Grayscale, BlackRock, and U.S. Bank reinforce the firm's focus on",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Investment Process",
-      "Brett Machtig"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
     "id": "4",
     "firm": "MORGAN STANLEY",
     "priority": "high",
@@ -91,10 +91,10 @@
     "signal_category": "offering",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.businesswire.com/news/home/20260316667499/en/Morgan-Stanley-Wealth-Management-Surpasses-$1-Trillion-in-Individual-Retirement-Account-Assets-Under-Management",
-    "source_label": "businesswire.com",
-    "source_date": "Tue, 17 Mar 2026 01:00:00 GMT",
-    "evidence": "Individual Retirement Account Assets Under Management NEW YORK--(BUSINESS WIRE)--Morgan Stanley Wealth Management today announced it surpassed $1 trillion in Individual Retirement Account (IRA) assets under management (AUM) 1. Since 2022, IRA assets",
+    "source": "https://www.morningstar.com/news/business-wire/20260605548390/morgan-stanley-wealth-management-and-galaxy-digital-announce-referral-capability-for-in-kind-creation-of-spot-crypto-etp-shares",
+    "source_label": "morningstar.com",
+    "source_date": "Thu, 04 Jun 2026 22:30:00 GMT",
+    "evidence": "Morgan Stanley Wealth Management and Galaxy Digital Announce Referral Capability for In-Kind Creation of Spot Crypto ETP Shares Morgan Stanley Wealth Management today announced a new referral arrangement with Galaxy Digital (\u201cGalaxy\u201d) t",
     "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
     "contacts": [
       "Chief Investment Officer",
@@ -169,6 +169,34 @@
   },
   {
     "id": "7",
+    "firm": "SENTINEL GLOBAL",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.coindesk.com/business/2026/03/12/crypto-accounting-firm-cryptio-raises-usd45-million-in-series-b-funding-round",
+    "source_label": "coindesk.com",
+    "source_date": "Thu, 12 Mar 2026 06:49:00 GMT",
+    "evidence": "Crypto accounting firm Cryptio raises $45 million as institutional demand accelerates Cryptio raised $45 million in Series B f",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "8",
     "firm": "FIRST EAGLE SEPARATE ACCOUNT MANAGEMENT, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
