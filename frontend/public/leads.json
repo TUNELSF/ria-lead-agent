@@ -169,34 +169,6 @@
   },
   {
     "id": "7",
-    "firm": "SENTINEL GLOBAL",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.coindesk.com/business/2026/03/12/crypto-accounting-firm-cryptio-raises-usd45-million-in-series-b-funding-round",
-    "source_label": "coindesk.com",
-    "source_date": "Thu, 12 Mar 2026 06:49:00 GMT",
-    "evidence": "Crypto accounting firm Cryptio raises $45 million as institutional demand accelerates Cryptio raised $45 million in Series B f",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "8",
     "firm": "FIRST EAGLE SEPARATE ACCOUNT MANAGEMENT, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
