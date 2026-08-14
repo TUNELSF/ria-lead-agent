@@ -57,20 +57,20 @@
   },
   {
     "id": "3",
-    "firm": "DWP",
+    "firm": "MORGAN STANLEY",
     "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
+    "signal_type": "product_launch",
+    "signal_category": "offering",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.consumeraffairs.com/finance/digital-wealth-partners.html",
-    "source_label": "consumeraffairs.com",
-    "source_date": "Wed, 08 Jul 2026 17:00:00 GMT",
-    "evidence": "alth Partners Reviews Digital Wealth Partners (DWP) is a U.S.-based registered investment advisor (RIA) specializing in digital assets, including cryptocurrencies and blockchain-based alternatives. It provides customized ...",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "source": "https://www.msn.com/en-us/money/other/how-is-morgan-stanley-strengthening-its-position-in-digital-assets/ar-AA2a1VLF",
+    "source_label": "msn.com",
+    "source_date": "Thu, 13 Aug 2026 07:06:00 GMT",
+    "evidence": "How is Morgan Stanley strengthening its position in digital assets? Morgan Stanley\u2019s MS launch of the Morgan Stanley Ethereum Trust (\u201cMSSE\u201d) and Morgan Stanley Solana Trust (\u201cMSOL\u201d) mark",
+    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
     "contacts": [
-      "Robert Rahaim, CFP\u00ae",
-      "Chief Investment Officer"
+      "Chief Investment Officer",
+      "Managing Partner"
     ],
     "status": "new",
     "firm_profile": {
@@ -85,20 +85,20 @@
   },
   {
     "id": "4",
-    "firm": "MORGAN STANLEY",
+    "firm": "DWP",
     "priority": "high",
-    "signal_type": "product_launch",
-    "signal_category": "offering",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.morningstar.com/news/business-wire/20260605548390/morgan-stanley-wealth-management-and-galaxy-digital-announce-referral-capability-for-in-kind-creation-of-spot-crypto-etp-shares",
-    "source_label": "morningstar.com",
-    "source_date": "Thu, 04 Jun 2026 22:30:00 GMT",
-    "evidence": "Morgan Stanley Wealth Management and Galaxy Digital Announce Referral Capability for In-Kind Creation of Spot Crypto ETP Shares Morgan Stanley Wealth Management today announced a new referral arrangement with Galaxy Digital (\u201cGalaxy\u201d) t",
-    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
+    "source": "https://www.consumeraffairs.com/finance/digital-wealth-partners.html",
+    "source_label": "consumeraffairs.com",
+    "source_date": "Wed, 08 Jul 2026 17:00:00 GMT",
+    "evidence": "alth Partners Reviews Digital Wealth Partners (DWP) is a U.S.-based registered investment advisor (RIA) specializing in digital assets, including cryptocurrencies and blockchain-based alternatives. It provides customized ...",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
+      "Robert Rahaim, CFP\u00ae",
+      "Chief Investment Officer"
     ],
     "status": "new",
     "firm_profile": {
