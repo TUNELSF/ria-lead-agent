@@ -57,34 +57,6 @@
   },
   {
     "id": "3",
-    "firm": "MORGAN STANLEY",
-    "priority": "high",
-    "signal_type": "product_launch",
-    "signal_category": "offering",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.msn.com/en-us/money/other/how-is-morgan-stanley-strengthening-its-position-in-digital-assets/ar-AA2a1VLF",
-    "source_label": "msn.com",
-    "source_date": "Thu, 13 Aug 2026 07:06:00 GMT",
-    "evidence": "How is Morgan Stanley strengthening its position in digital assets? Morgan Stanley\u2019s MS launch of the Morgan Stanley Ethereum Trust (\u201cMSSE\u201d) and Morgan Stanley Solana Trust (\u201cMSOL\u201d) mark",
-    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "4",
     "firm": "DWP",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -112,18 +84,18 @@
     }
   },
   {
-    "id": "5",
-    "firm": "FRANKLIN TEMPLETON PRIVATE MARKETS ADVISER, LLC",
+    "id": "4",
+    "firm": "MORGAN STANLEY",
     "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
+    "signal_type": "product_launch",
+    "signal_category": "offering",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://finance.yahoo.com/markets/crypto/articles/crypto-news-today-july-28-084935936.html",
-    "source_label": "finance.yahoo.com",
-    "source_date": "Tue, 28 Jul 2026 01:49:00 GMT",
-    "evidence": "Crypto News Today (July 28): BTC Heading Toward $60K? NFL Calls for Stricter Regulation of Prediction Markets, and Securitize",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "source": "https://www.msn.com/en-us/money/other/how-is-morgan-stanley-strengthening-its-position-in-digital-assets/ar-AA2a1VLF",
+    "source_label": "msn.com",
+    "source_date": "Thu, 13 Aug 2026 07:06:00 GMT",
+    "evidence": "How is Morgan Stanley strengthening its position in digital assets? Morgan Stanley\u2019s MS launch of the Morgan Stanley Ethereum Trust (\u201cMSSE\u201d) and Morgan Stanley Solana Trust (\u201cMSOL\u201d) mark",
+    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
     "contacts": [
       "Chief Investment Officer",
       "Managing Partner"
@@ -140,45 +112,17 @@
     }
   },
   {
-    "id": "6",
-    "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
+    "id": "5",
+    "firm": "FRANKLIN TEMPLETON PRIVATE MARKETS ADVISER, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
     "signal_category": "general",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.assetservicingtimes.com/specialistfeatures/specialistfeature.php?specialist_id=702",
-    "source_label": "assetservicingtimes.com",
-    "source_date": "Tue, 28 Apr 2026 17:00:00 GMT",
-    "evidence": "ital assets For much of the past decade, digital asset custody has been built outside the traditional financial system. Crypto-native firms developed the infrastructure required to safeguard private keys and ...",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Leadership Team",
-      "Peter Gray"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "7",
-    "firm": "FIRST EAGLE SEPARATE ACCOUNT MANAGEMENT, LLC",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.investmentnews.com/independent-broker-dealers/crypto-has-arrived-in-the-brokerage-account-but-what-does-it-mean-for-advisors/266759",
-    "source_label": "investmentnews.com",
-    "source_date": "Tue, 26 May 2026 23:12:00 GMT",
-    "evidence": "Crypto has arrived in the brokerage account but what does it mean for advisors? Prometheum Capital, the SEC-registered crypto",
+    "source": "https://finance.yahoo.com/markets/crypto/articles/crypto-news-today-july-28-084935936.html",
+    "source_label": "finance.yahoo.com",
+    "source_date": "Tue, 28 Jul 2026 01:49:00 GMT",
+    "evidence": "Crypto News Today (July 28): BTC Heading Toward $60K? NFL Calls for Stricter Regulation of Prediction Markets, and Securitize",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
       "Chief Investment Officer",
