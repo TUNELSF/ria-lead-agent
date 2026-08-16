@@ -87,15 +87,15 @@
     "id": "4",
     "firm": "MORGAN STANLEY",
     "priority": "high",
-    "signal_type": "product_launch",
-    "signal_category": "offering",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.msn.com/en-us/money/other/how-is-morgan-stanley-strengthening-its-position-in-digital-assets/ar-AA2a1VLF",
-    "source_label": "msn.com",
-    "source_date": "Thu, 13 Aug 2026 07:06:00 GMT",
-    "evidence": "How is Morgan Stanley strengthening its position in digital assets? Morgan Stanley\u2019s MS launch of the Morgan Stanley Ethereum Trust (\u201cMSSE\u201d) and Morgan Stanley Solana Trust (\u201cMSOL\u201d) mark",
-    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
+    "source": "https://bitcoinmagazine.com/news/morgan-stanley-bitcoin-executive-education",
+    "source_label": "bitcoinmagazine.com",
+    "source_date": "Wed, 10 Jun 2026 10:46:00 GMT",
+    "evidence": "gan Stanley\u2019s Bitcoin Executive Says Education \u2014 Not Products \u2014 Is Wall Street\u2019s Real Obstacle Morgan Stanley's Head of Digital Asset Strategy Amy Oldenburg says Bitcoin's biggest barrier to mainstream adoption is not product availability but investor a",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
       "Chief Investment Officer",
       "Managing Partner"
@@ -113,6 +113,34 @@
   },
   {
     "id": "5",
+    "firm": "A SMARTER WAY TO INVEST",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
+    "source": "https://www.fool.com/investing/2026/07/06/blackrock-introduce-new-way-invest-bitcoin-etf-buy/",
+    "source_label": "fool.com",
+    "source_date": "Mon, 06 Jul 2026 02:55:00 GMT",
+    "evidence": "BlackRock Just Introduced a New Way to Invest in Bitcoin. But Is This New ETF a Buy? The iShares Bitcoin Premium Income ETF \"seeks to track the performance of bitcoin while gen",
+    "hook": "Saw the recent ETF or portfolio activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "6",
     "firm": "FRANKLIN TEMPLETON PRIVATE MARKETS ADVISER, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
