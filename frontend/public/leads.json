@@ -59,15 +59,15 @@
     "id": "3",
     "firm": "MORGAN STANLEY",
     "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
+    "signal_type": "product_launch",
+    "signal_category": "offering",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://bitcoinmagazine.com/news/morgan-stanley-bitcoin-executive-education",
-    "source_label": "bitcoinmagazine.com",
-    "source_date": "Wed, 10 Jun 2026 10:46:00 GMT",
-    "evidence": "gan Stanley\u2019s Bitcoin Executive Says Education \u2014 Not Products \u2014 Is Wall Street\u2019s Real Obstacle Morgan Stanley's Head of Digital Asset Strategy Amy Oldenburg says Bitcoin's biggest barrier to mainstream adoption is not product availability but investor a",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "source": "https://www.businesswire.com/news/home/20260316667499/en/Morgan-Stanley-Wealth-Management-Surpasses-$1-Trillion-in-Individual-Retirement-Account-Assets-Under-Management",
+    "source_label": "businesswire.com",
+    "source_date": "Tue, 17 Mar 2026 01:00:00 GMT",
+    "evidence": "Individual Retirement Account Assets Under Management NEW YORK--(BUSINESS WIRE)--Morgan Stanley Wealth Management today announced it surpassed $1 trillion in Individual Retirement Account (IRA) assets under management (AUM) 1. Since 2022, IRA assets",
+    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
     "contacts": [
       "Chief Investment Officer",
       "Managing Partner"
@@ -85,6 +85,34 @@
   },
   {
     "id": "4",
+    "firm": "BNY MELLON ETF INVESTMENT ADVISER, LLC",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
+    "source": "https://finance.yahoo.com/markets/crypto/articles/ibit-vs-fbtc-bitcoin-etf-053500908.html",
+    "source_label": "finance.yahoo.com",
+    "source_date": "Mon, 08 Jun 2026 22:35:00 GMT",
+    "evidence": "IBIT vs. FBTC: Which Bitcoin ETF Is Better? The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does",
+    "hook": "Saw the recent ETF or portfolio activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "5",
     "firm": "FRANKLIN TEMPLETON PRIVATE MARKETS ADVISER, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -112,21 +140,21 @@
     }
   },
   {
-    "id": "5",
-    "firm": "FIRST EAGLE SEPARATE ACCOUNT MANAGEMENT, LLC",
+    "id": "6",
+    "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
     "priority": "high",
     "signal_type": "crypto_signal",
     "signal_category": "general",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.investmentnews.com/independent-broker-dealers/crypto-has-arrived-in-the-brokerage-account-but-what-does-it-mean-for-advisors/266759",
-    "source_label": "investmentnews.com",
-    "source_date": "Tue, 26 May 2026 23:12:00 GMT",
-    "evidence": "Crypto has arrived in the brokerage account but what does it mean for advisors? Prometheum Capital, the SEC-registered crypto",
+    "source": "https://www.assetservicingtimes.com/specialistfeatures/specialistfeature.php?specialist_id=702",
+    "source_label": "assetservicingtimes.com",
+    "source_date": "Tue, 28 Apr 2026 17:00:00 GMT",
+    "evidence": "ital assets For much of the past decade, digital asset custody has been built outside the traditional financial system. Crypto-native firms developed the infrastructure required to safeguard private keys and ...",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
+      "Leadership Team",
+      "Peter Gray"
     ],
     "status": "new",
     "firm_profile": {
