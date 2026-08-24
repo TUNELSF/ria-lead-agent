@@ -57,16 +57,16 @@
   },
   {
     "id": "3",
-    "firm": "MORGAN STANLEY",
+    "firm": "MUTUAL OF OMAHA INVESTOR SERVICES, INC.",
     "priority": "high",
     "signal_type": "crypto_signal",
     "signal_category": "general",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://bitcoinmagazine.com/news/morgan-stanley-bitcoin-executive-education",
-    "source_label": "bitcoinmagazine.com",
-    "source_date": "Wed, 10 Jun 2026 10:46:00 GMT",
-    "evidence": "gan Stanley\u2019s Bitcoin Executive Says Education \u2014 Not Products \u2014 Is Wall Street\u2019s Real Obstacle Morgan Stanley's Head of Digital Asset Strategy Amy Oldenburg says Bitcoin's biggest barrier to mainstream adoption is not product availability but investor a",
+    "source": "https://economictimes.indiatimes.com/wealth/invest/crypto-today-is-where-mutual-funds-were-in-1995-bitdelta-india-ceo-on-digital-assets-and-their-role-in-your-portfolio/articleshow/133416135.cms",
+    "source_label": "economictimes.indiatimes.com",
+    "source_date": "Mon, 24 Aug 2026 04:29:00 GMT",
+    "evidence": "\u2018Crypto today is where mutual funds were in 1995\u2019: BitDelta India CEO on digital assets and their role in your portfolio Vikaas",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
       "Chief Investment Officer",
@@ -113,6 +113,34 @@
   },
   {
     "id": "5",
+    "firm": "MORGAN STANLEY",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://bitcoinmagazine.com/news/morgan-stanley-bitcoin-executive-education",
+    "source_label": "bitcoinmagazine.com",
+    "source_date": "Wed, 10 Jun 2026 10:46:00 GMT",
+    "evidence": "gan Stanley\u2019s Bitcoin Executive Says Education \u2014 Not Products \u2014 Is Wall Street\u2019s Real Obstacle Morgan Stanley's Head of Digital Asset Strategy Amy Oldenburg says Bitcoin's biggest barrier to mainstream adoption is not product availability but investor a",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "6",
     "firm": "FRANKLIN TEMPLETON PRIVATE MARKETS ADVISER, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -140,7 +168,7 @@
     }
   },
   {
-    "id": "6",
+    "id": "7",
     "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -155,6 +183,34 @@
     "contacts": [
       "Leadership Team",
       "Peter Gray"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "8",
+    "firm": "SENTINEL GLOBAL",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.coindesk.com/business/2026/03/12/crypto-accounting-firm-cryptio-raises-usd45-million-in-series-b-funding-round",
+    "source_label": "coindesk.com",
+    "source_date": "Thu, 12 Mar 2026 06:49:00 GMT",
+    "evidence": "Crypto accounting firm Cryptio raises $45 million as institutional demand accelerates Cryptio raised $45 million in Series B f",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
     ],
     "status": "new",
     "firm_profile": {
