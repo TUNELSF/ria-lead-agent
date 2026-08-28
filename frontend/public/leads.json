@@ -37,7 +37,7 @@
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
     "source": "https://www.manilatimes.net/2026/08/28/tmt-newswire/globenewswire/digital-ascension-group-names-robert-gagnon-general-counsel/2413804",
     "source_label": "manilatimes.net",
-    "source_date": "Thu, 27 Aug 2026 03:00:00 GMT",
+    "source_date": "Thu, 27 Aug 2026 17:00:00 GMT",
     "evidence": "eneral Counsel Gagnon joins from Franklin Templeton, where he was senior corporate council for the firm's institutional digital assets business ...",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
@@ -113,62 +113,6 @@
   },
   {
     "id": "5",
-    "firm": "MORGAN STANLEY",
-    "priority": "high",
-    "signal_type": "product_launch",
-    "signal_category": "offering",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.morningstar.com/news/business-wire/20260605548390/morgan-stanley-wealth-management-and-galaxy-digital-announce-referral-capability-for-in-kind-creation-of-spot-crypto-etp-shares",
-    "source_label": "morningstar.com",
-    "source_date": "Thu, 04 Jun 2026 22:30:00 GMT",
-    "evidence": "Morgan Stanley Wealth Management and Galaxy Digital Announce Referral Capability for In-Kind Creation of Spot Crypto ETP Shares Morgan Stanley Wealth Management today announced a new referral arrangement with Galaxy Digital (\u201cGalaxy\u201d) t",
-    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "6",
-    "firm": "BNY MELLON ETF INVESTMENT ADVISER, LLC",
-    "priority": "medium",
-    "signal_type": "etf_activity",
-    "signal_category": "portfolio",
-    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
-    "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
-    "source": "https://finance.yahoo.com/markets/crypto/articles/ibit-vs-fbtc-bitcoin-etf-053500908.html",
-    "source_label": "finance.yahoo.com",
-    "source_date": "Mon, 08 Jun 2026 22:35:00 GMT",
-    "evidence": "IBIT vs. FBTC: Which Bitcoin ETF Is Better? The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does",
-    "hook": "Saw the recent ETF or portfolio activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "7",
     "firm": "ALONGSIDE, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -196,7 +140,7 @@
     }
   },
   {
-    "id": "8",
+    "id": "6",
     "firm": "FRANKLIN TEMPLETON PRIVATE MARKETS ADVISER, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -224,7 +168,7 @@
     }
   },
   {
-    "id": "9",
+    "id": "7",
     "firm": "SENTINEL GLOBAL",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -236,6 +180,34 @@
     "source_date": "Thu, 12 Mar 2026 06:49:00 GMT",
     "evidence": "Crypto accounting firm Cryptio raises $45 million as institutional demand accelerates Cryptio raised $45 million in Series B f",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "8",
+    "firm": "MORGAN STANLEY",
+    "priority": "high",
+    "signal_type": "product_launch",
+    "signal_category": "offering",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.morningstar.com/news/business-wire/20260605548390/morgan-stanley-wealth-management-and-galaxy-digital-announce-referral-capability-for-in-kind-creation-of-spot-crypto-etp-shares",
+    "source_label": "morningstar.com",
+    "source_date": "Thu, 04 Jun 2026 22:30:00 GMT",
+    "evidence": "Morgan Stanley Wealth Management and Galaxy Digital Announce Referral Capability for In-Kind Creation of Spot Crypto ETP Shares Morgan Stanley Wealth Management today announced a new referral arrangement with Galaxy Digital (\u201cGalaxy\u201d) t",
+    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
     "contacts": [
       "Chief Investment Officer",
       "Managing Partner"
