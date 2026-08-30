@@ -57,16 +57,16 @@
   },
   {
     "id": "3",
-    "firm": "MUTUAL OF OMAHA INVESTOR SERVICES, INC.",
+    "firm": "FRANKLIN TEMPLETON INSTITUTIONAL, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
     "signal_category": "general",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://economictimes.indiatimes.com/wealth/invest/crypto-today-is-where-mutual-funds-were-in-1995-bitdelta-india-ceo-on-digital-assets-and-their-role-in-your-portfolio/articleshow/133416135.cms",
-    "source_label": "economictimes.indiatimes.com",
-    "source_date": "Mon, 24 Aug 2026 04:29:00 GMT",
-    "evidence": "\u2018Crypto today is where mutual funds were in 1995\u2019: BitDelta India CEO on digital assets and their role in your portfolio Vikaas",
+    "source": "https://www.manilatimes.net/2026/08/28/tmt-newswire/globenewswire/digital-ascension-group-names-robert-gagnon-general-counsel/2413804",
+    "source_label": "manilatimes.net",
+    "source_date": "Thu, 27 Aug 2026 17:00:00 GMT",
+    "evidence": "eneral Counsel Gagnon joins from Franklin Templeton, where he was senior corporate council for the firm's institutional digital assets business ...",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
       "Chief Investment Officer",
@@ -113,34 +113,6 @@
   },
   {
     "id": "5",
-    "firm": "MORGAN STANLEY",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://bitcoinmagazine.com/news/morgan-stanley-bitcoin-executive-education",
-    "source_label": "bitcoinmagazine.com",
-    "source_date": "Wed, 10 Jun 2026 10:46:00 GMT",
-    "evidence": "gan Stanley\u2019s Bitcoin Executive Says Education \u2014 Not Products \u2014 Is Wall Street\u2019s Real Obstacle Morgan Stanley's Head of Digital Asset Strategy Amy Oldenburg says Bitcoin's biggest barrier to mainstream adoption is not product availability but investor a",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "6",
     "firm": "ALONGSIDE, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -168,7 +140,7 @@
     }
   },
   {
-    "id": "7",
+    "id": "6",
     "firm": "FRANKLIN TEMPLETON PRIVATE MARKETS ADVISER, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -179,6 +151,90 @@
     "source_label": "finance.yahoo.com",
     "source_date": "Tue, 28 Jul 2026 01:49:00 GMT",
     "evidence": "Crypto News Today (July 28): BTC Heading Toward $60K? NFL Calls for Stricter Regulation of Prediction Markets, and Securitize",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "7",
+    "firm": "SENTINEL GLOBAL",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.coindesk.com/business/2026/03/12/crypto-accounting-firm-cryptio-raises-usd45-million-in-series-b-funding-round",
+    "source_label": "coindesk.com",
+    "source_date": "Thu, 12 Mar 2026 06:49:00 GMT",
+    "evidence": "Crypto accounting firm Cryptio raises $45 million as institutional demand accelerates Cryptio raised $45 million in Series B f",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "8",
+    "firm": "MORGAN STANLEY",
+    "priority": "high",
+    "signal_type": "product_launch",
+    "signal_category": "offering",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.morningstar.com/news/business-wire/20260605548390/morgan-stanley-wealth-management-and-galaxy-digital-announce-referral-capability-for-in-kind-creation-of-spot-crypto-etp-shares",
+    "source_label": "morningstar.com",
+    "source_date": "Thu, 04 Jun 2026 22:30:00 GMT",
+    "evidence": "Morgan Stanley Wealth Management and Galaxy Digital Announce Referral Capability for In-Kind Creation of Spot Crypto ETP Shares Morgan Stanley Wealth Management today announced a new referral arrangement with Galaxy Digital (\u201cGalaxy\u201d) t",
+    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "9",
+    "firm": "FIRST EAGLE SEPARATE ACCOUNT MANAGEMENT, LLC",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.investmentnews.com/independent-broker-dealers/crypto-has-arrived-in-the-brokerage-account-but-what-does-it-mean-for-advisors/266759",
+    "source_label": "investmentnews.com",
+    "source_date": "Tue, 26 May 2026 23:12:00 GMT",
+    "evidence": "Crypto has arrived in the brokerage account but what does it mean for advisors? Prometheum Capital, the SEC-registered crypto",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
       "Chief Investment Officer",
