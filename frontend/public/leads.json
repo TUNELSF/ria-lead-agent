@@ -37,7 +37,7 @@
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
     "source": "https://www.consumeraffairs.com/finance/digital-wealth-partners.html",
     "source_label": "consumeraffairs.com",
-    "source_date": "Thu, 13 Aug 2026 17:00:00 GMT",
+    "source_date": "Wed, 02 Sep 2026 17:00:00 GMT",
     "evidence": "alth Partners Reviews Digital Wealth Partners (DWP) is a U.S.-based registered investment advisor (RIA) specializing in digital assets, including cryptocurrencies and blockchain-based alternatives. It provides customized ...",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
@@ -91,10 +91,10 @@
     "signal_category": "portfolio",
     "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
     "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
-    "source": "https://finance.yahoo.com/markets/crypto/articles/ibit-vs-fbtc-bitcoin-etf-053500908.html",
+    "source": "https://finance.yahoo.com/markets/crypto/articles/etf-built-advisors-without-bitcoin-002221850.html",
     "source_label": "finance.yahoo.com",
-    "source_date": "Mon, 08 Jun 2026 22:35:00 GMT",
-    "evidence": "IBIT vs. FBTC: Which Bitcoin ETF Is Better? The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does",
+    "source_date": "Tue, 16 Jun 2026 17:22:00 GMT",
+    "evidence": "The ETF Built for the Advisors Without a Bitcoin Plan The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer",
     "hook": "Saw the recent ETF or portfolio activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
     "contacts": [
       "Chief Investment Officer",
@@ -141,34 +141,6 @@
   },
   {
     "id": "6",
-    "firm": "EDELMAN FINANCIAL ENGINES",
-    "priority": "medium",
-    "signal_type": "etf_activity",
-    "signal_category": "portfolio",
-    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
-    "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
-    "source": "https://www.crowdfundinsider.com/2026/08/297620-edelman-financial-engines-bitcoin-etf-position-now-exceeds-its-amazon-holdings/",
-    "source_label": "crowdfundinsider.com",
-    "source_date": "Thu, 20 Aug 2026 12:56:00 GMT",
-    "evidence": "Edelman Financial Engines\u2019 Bitcoin ETF Position Now Exceeds Its Amazon Holdings Edelman Financial Engines has revealed a substantial allocation to Bitcoin",
-    "hook": "Saw the recent ETF or portfolio activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "7",
     "firm": "ALONGSIDE, LLC",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -179,34 +151,6 @@
     "source_label": "financefeeds.com",
     "source_date": "Wed, 26 Aug 2026 11:18:00 GMT",
     "evidence": "SEC Crypto Custody Overhaul Advances to White House Regulatory Review The SEC's adviser crypto-custody proposal is now at OIRA - p",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "8",
-    "firm": "SENTINEL GLOBAL",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.coindesk.com/business/2026/03/12/crypto-accounting-firm-cryptio-raises-usd45-million-in-series-b-funding-round",
-    "source_label": "coindesk.com",
-    "source_date": "Thu, 12 Mar 2026 06:49:00 GMT",
-    "evidence": "Crypto accounting firm Cryptio raises $45 million as institutional demand accelerates Cryptio raised $45 million in Series B f",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
       "Chief Investment Officer",
