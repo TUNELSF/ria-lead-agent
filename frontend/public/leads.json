@@ -57,6 +57,62 @@
   },
   {
     "id": "3",
+    "firm": "MUTUAL OF OMAHA INVESTOR SERVICES, INC.",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://economictimes.indiatimes.com/wealth/invest/crypto-today-is-where-mutual-funds-were-in-1995-bitdelta-india-ceo-on-digital-assets-and-their-role-in-your-portfolio/articleshow/133416135.cms",
+    "source_label": "economictimes.indiatimes.com",
+    "source_date": "Sun, 23 Aug 2026 22:23:00 GMT",
+    "evidence": "\u2018Crypto today is where mutual funds were in 1995\u2019: BitDelta India CEO on digital assets and their role in your portfolio Vikaas",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "4",
+    "firm": "MORGAN STANLEY",
+    "priority": "high",
+    "signal_type": "product_launch",
+    "signal_category": "offering",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.morningstar.com/news/business-wire/20260605548390/morgan-stanley-wealth-management-and-galaxy-digital-announce-referral-capability-for-in-kind-creation-of-spot-crypto-etp-shares",
+    "source_label": "morningstar.com",
+    "source_date": "Thu, 04 Jun 2026 22:30:00 GMT",
+    "evidence": "Morgan Stanley Wealth Management and Galaxy Digital Announce Referral Capability for In-Kind Creation of Spot Crypto ETP Shares Morgan Stanley Wealth Management today announced a new referral arrangement with Galaxy Digital (\u201cGalaxy\u201d) t",
+    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "5",
     "firm": "BNY MELLON ETF INVESTMENT ADVISER, LLC",
     "priority": "medium",
     "signal_type": "etf_activity",
@@ -84,35 +140,7 @@
     }
   },
   {
-    "id": "4",
-    "firm": "MORGAN STANLEY",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://bitcoinmagazine.com/news/morgan-stanley-bitcoin-executive-education",
-    "source_label": "bitcoinmagazine.com",
-    "source_date": "Wed, 10 Jun 2026 10:46:00 GMT",
-    "evidence": "gan Stanley\u2019s Bitcoin Executive Says Education \u2014 Not Products \u2014 Is Wall Street\u2019s Real Obstacle Morgan Stanley's Head of Digital Asset Strategy Amy Oldenburg says Bitcoin's biggest barrier to mainstream adoption is not product availability but investor a",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "5",
+    "id": "6",
     "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
     "priority": "high",
     "signal_type": "crypto_signal",
