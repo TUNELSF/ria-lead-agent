@@ -110,33 +110,5 @@
       "bd_affiliated": null,
       "independence": "unknown"
     }
-  },
-  {
-    "id": "5",
-    "firm": "BNY MELLON ETF INVESTMENT ADVISER, LLC",
-    "priority": "medium",
-    "signal_type": "etf_activity",
-    "signal_category": "portfolio",
-    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
-    "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
-    "source": "https://finance.yahoo.com/markets/crypto/articles/got-100-best-crypto-etf-142500284.html",
-    "source_label": "finance.yahoo.com",
-    "source_date": "Tue, 04 Aug 2026 07:25:00 GMT",
-    "evidence": "Got $100? This Is the Best Crypto ETF to Buy Right Now The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and",
-    "hook": "Saw the recent ETF or portfolio activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
   }
 ]
