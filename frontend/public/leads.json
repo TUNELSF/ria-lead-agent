@@ -29,6 +29,34 @@
   },
   {
     "id": "2",
+    "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://hubbis.com/article/samar-sen-on-talos-and-the-infrastructure-behind-institutional-digital-assets",
+    "source_label": "hubbis.com",
+    "source_date": "Wed, 16 Sep 2026 17:00:00 GMT",
+    "evidence": "Samar Sen on Talos and the Infrastructure Behind Institutional Digital Assets Institutional digital asset activity now extends beyond cryptocurrencies to stablecoins, tokenised deposits, funds and conventional securities repr",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Leadership Team",
+      "Peter Gray"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "3",
     "firm": "DWP",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -56,18 +84,18 @@
     }
   },
   {
-    "id": "3",
-    "firm": "GLOBAL FRONTIER INVESTMENTS, LLC",
+    "id": "4",
+    "firm": "MUTUAL OF OMAHA INVESTOR SERVICES, INC.",
     "priority": "high",
-    "signal_type": "event",
-    "signal_category": "education",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://cointelegraph.com/press-releases/cv-summit-global-and-swiss-leaders-convene-at-switzerlands-largest-digital-assets-ai-conference",
-    "source_label": "cointelegraph.com",
-    "source_date": "Wed, 16 Sep 2026 05:03:00 GMT",
-    "evidence": "nd Swiss leaders convene at Switzerland\u2019s largest digital assets & AI conference CV Summit 2026 brings global and Swiss digital asset and AI leaders together in Zurich to examine where institutional utility of frontier technologies such as AI and blockc",
-    "hook": "Saw the recent event-related signal \u2014 curious how you're educating clients or advisors around digital assets.",
+    "source": "https://economictimes.indiatimes.com/wealth/invest/crypto-today-is-where-mutual-funds-were-in-1995-bitdelta-india-ceo-on-digital-assets-and-their-role-in-your-portfolio/articleshow/133416135.cms",
+    "source_label": "economictimes.indiatimes.com",
+    "source_date": "Sun, 23 Aug 2026 22:23:00 GMT",
+    "evidence": "\u2018Crypto today is where mutual funds were in 1995\u2019: BitDelta India CEO on digital assets and their role in your portfolio Vikaas",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
       "Chief Investment Officer",
       "Managing Partner"
@@ -84,7 +112,7 @@
     }
   },
   {
-    "id": "4",
+    "id": "5",
     "firm": "MORGAN STANLEY",
     "priority": "high",
     "signal_type": "crypto_signal",
