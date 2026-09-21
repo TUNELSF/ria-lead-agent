@@ -82,33 +82,5 @@
       "bd_affiliated": null,
       "independence": "unknown"
     }
-  },
-  {
-    "id": "4",
-    "firm": "ADVISORS CRYPTO, INC.",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.investmentnews.com/regulation-legal-compliance/texas-ria-and-founder-in-hot-water-over-crypto-backed-model-portfolio/267479",
-    "source_label": "investmentnews.com",
-    "source_date": "Mon, 20 Jul 2026 09:43:00 GMT",
-    "evidence": "Texas RIA and founder in hot water over crypto-backed model portfolio According to a cease and desist order by Washington State Department of Financial Institutions D",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
   }
 ]
