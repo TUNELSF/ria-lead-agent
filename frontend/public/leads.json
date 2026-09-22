@@ -54,33 +54,5 @@
       "bd_affiliated": null,
       "independence": "unknown"
     }
-  },
-  {
-    "id": "3",
-    "firm": "BNY MELLON ETF INVESTMENT ADVISER, LLC",
-    "priority": "medium",
-    "signal_type": "etf_activity",
-    "signal_category": "portfolio",
-    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
-    "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
-    "source": "https://finance.yahoo.com/markets/crypto/articles/etf-built-advisors-without-bitcoin-002221850.html",
-    "source_label": "finance.yahoo.com",
-    "source_date": "Tue, 16 Jun 2026 17:22:00 GMT",
-    "evidence": "The ETF Built for the Advisors Without a Bitcoin Plan The above button links to Coinbase. Yahoo Finance is not a broker-dealer or investment adviser and does not offer",
-    "hook": "Saw the recent ETF or portfolio activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
   }
 ]
