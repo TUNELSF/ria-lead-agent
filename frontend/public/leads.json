@@ -1,62 +1,6 @@
 [
   {
     "id": "1",
-    "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://hubbis.com/article/samar-sen-on-talos-and-the-infrastructure-behind-institutional-digital-assets",
-    "source_label": "hubbis.com",
-    "source_date": "Wed, 16 Sep 2026 17:00:00 GMT",
-    "evidence": "Samar Sen on Talos and the Infrastructure Behind Institutional Digital Assets Institutional digital asset activity now extends beyond cryptocurrencies to stablecoins, tokenised deposits, funds and conventional securities repr",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Leadership Team",
-      "Peter Gray"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "2",
-    "firm": "MORGAN STANLEY",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://seekingalpha.com/article/4929566-morgan-stanley-why-crypto-strengthens-the-wealth-management-flywheel",
-    "source_label": "seekingalpha.com",
-    "source_date": "Mon, 03 Aug 2026 11:16:00 GMT",
-    "evidence": "Morgan Stanley: Why Crypto Strengthens The Wealth Management Flywheel Morgan Stanley is increasingly driven by its wealth management franchise, wh",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "3",
     "firm": "ADVISORS CRYPTO, INC.",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -84,7 +28,91 @@
     }
   },
   {
+    "id": "2",
+    "firm": "SAVVY",
+    "priority": "high",
+    "signal_type": "product_launch",
+    "signal_category": "offering",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.wealthmanagement.com/artificial-intelligence/savvy-wealth-launches-custodial-platform-for-rias",
+    "source_label": "wealthmanagement.com",
+    "source_date": "Wed, 23 Sep 2026 03:00:00 GMT",
+    "evidence": "Savvy Wealth Launches Custodial Platform for RIAs The AI-native RIA promises 90-second client onboarding with its new platform, which uses Fi",
+    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
+    "contacts": [
+      "Arrow Right",
+      "Ritik Malhotra"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "3",
+    "firm": "HARBOURVEST REGISTERED ADVISERS II",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.investmentnews.com/alternatives/broadridge-brings-digital-assets-to-us-wealth-management-platforms/268192",
+    "source_label": "investmentnews.com",
+    "source_date": "Mon, 14 Sep 2026 23:47:00 GMT",
+    "evidence": "Broadridge brings digital assets to US wealth management platforms Broadridge Financial Solutions has expanded its next-generation digital assets platfo",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
     "id": "4",
+    "firm": "MORGAN STANLEY",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://seekingalpha.com/article/4929566-morgan-stanley-why-crypto-strengthens-the-wealth-management-flywheel",
+    "source_label": "seekingalpha.com",
+    "source_date": "Mon, 03 Aug 2026 11:16:00 GMT",
+    "evidence": "Morgan Stanley: Why Crypto Strengthens The Wealth Management Flywheel Morgan Stanley is increasingly driven by its wealth management franchise, wh",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "5",
     "firm": "COUNTER GLOBAL, L.P.",
     "priority": "high",
     "signal_type": "crypto_signal",
