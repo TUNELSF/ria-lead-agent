@@ -119,14 +119,42 @@
     "signal_category": "general",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.investmentnews.com/alternatives/broadridge-brings-digital-assets-to-us-wealth-management-platforms/268192",
-    "source_label": "investmentnews.com",
-    "source_date": "Mon, 14 Sep 2026 23:47:00 GMT",
-    "evidence": "Broadridge brings digital assets to US wealth management platforms Broadridge Financial Solutions has expanded its next-generation digital assets platfo",
+    "source": "https://menafn.com/1111749300/SEC-Targets-Crypto-Custody-Hurdle-For-Registered-Investment-Advisers",
+    "source_label": "menafn.com",
+    "source_date": "Thu, 01 Oct 2026 04:30:00 GMT",
+    "evidence": "SEC Targets Crypto Custody Hurdle For Registered Investment Advisers SEC Targets Crypto Custody Hurdle For Registered Investment Advisers.",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
       "Chief Investment Officer",
       "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "6",
+    "firm": "OMERS INFRASTRUCTURE AND OMERS INFRASTRUCTURE US",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.assetservicingtimes.com/specialistfeatures/specialistfeature.php?specialist_id=702",
+    "source_label": "assetservicingtimes.com",
+    "source_date": "Tue, 28 Apr 2026 17:00:00 GMT",
+    "evidence": "ital assets For much of the past decade, digital asset custody has been built outside the traditional financial system. Crypto-native firms developed the infrastructure required to safeguard private keys and ...",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Leadership Team",
+      "Peter Gray"
     ],
     "status": "new",
     "firm_profile": {
