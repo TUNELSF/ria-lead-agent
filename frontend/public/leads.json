@@ -82,5 +82,33 @@
       "bd_affiliated": null,
       "independence": "unknown"
     }
+  },
+  {
+    "id": "4",
+    "firm": "HARBOURVEST REGISTERED ADVISERS II",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.investmentnews.com/alternatives/broadridge-brings-digital-assets-to-us-wealth-management-platforms/268192",
+    "source_label": "investmentnews.com",
+    "source_date": "Mon, 14 Sep 2026 23:47:00 GMT",
+    "evidence": "Broadridge brings digital assets to US wealth management platforms Broadridge Financial Solutions has expanded its next-generation digital assets platfo",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
   }
 ]
