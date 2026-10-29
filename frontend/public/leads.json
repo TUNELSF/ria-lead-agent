@@ -65,7 +65,7 @@
     "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
     "source": "https://www.cryptotimes.io/2026/10/26/franklin-templetons-dividend-to-bitcoin-etf-nears-debut-with-5-bitcoin-target/",
     "source_label": "cryptotimes.io",
-    "source_date": "Mon, 26 Oct 2026 11:30:00 GMT",
+    "source_date": "Mon, 26 Oct 2026 05:41:00 GMT",
     "evidence": "Franklin Templeton\u2019s Dividend-to-Bitcoin ETF Nears Debut With 5% Bitcoin Target Franklin Templeton's dividend-to-bitcoin ETF, now confirmed under ticker FBEQ, i",
     "hook": "Saw the recent ETF or portfolio activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
     "contacts": [
@@ -91,10 +91,10 @@
     "signal_category": "general",
     "trigger": "Explicit crypto-related language found in recent media coverage",
     "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.investmentnews.com/alternatives/broadridge-brings-digital-assets-to-us-wealth-management-platforms/268192",
-    "source_label": "investmentnews.com",
-    "source_date": "Mon, 14 Sep 2026 23:47:00 GMT",
-    "evidence": "Broadridge brings digital assets to US wealth management platforms Broadridge Financial Solutions has expanded its next-generation digital assets platfo",
+    "source": "https://www.newsbtc.com/news/sec-crypto-custody-proposal-could-expand-options-for-advisers-and-funds/",
+    "source_label": "newsbtc.com",
+    "source_date": "Wed, 28 Oct 2026 18:00:00 GMT",
+    "evidence": "SEC Crypto Custody Proposal Could Expand Options for Advisers and Funds The SEC has proposed a tailored custody framework for inve",
     "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
     "contacts": [
       "Chief Investment Officer",
