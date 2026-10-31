@@ -85,34 +85,6 @@
   },
   {
     "id": "4",
-    "firm": "FRANKLIN TEMPLETON PRIVATE PORTFOLIO GROUP, LLC",
-    "priority": "medium",
-    "signal_type": "etf_activity",
-    "signal_category": "portfolio",
-    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
-    "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
-    "source": "https://www.cryptotimes.io/2026/10/26/franklin-templetons-dividend-to-bitcoin-etf-nears-debut-with-5-bitcoin-target/",
-    "source_label": "cryptotimes.io",
-    "source_date": "Mon, 26 Oct 2026 11:30:00 GMT",
-    "evidence": "Franklin Templeton\u2019s Dividend-to-Bitcoin ETF Nears Debut With 5% Bitcoin Target Franklin Templeton's dividend-to-bitcoin ETF, now confirmed under ticker FBEQ, i",
-    "hook": "Saw the recent ETF or portfolio activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "5",
     "firm": "HARBOURVEST REGISTERED ADVISERS II",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -127,34 +99,6 @@
     "contacts": [
       "Chief Investment Officer",
       "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "6",
-    "firm": "NEXT CENTURY GROWTH INVESTORS LLC",
-    "priority": "high",
-    "signal_type": "crypto_signal",
-    "signal_category": "general",
-    "trigger": "Explicit crypto-related language found in recent media coverage",
-    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
-    "source": "https://www.cryptotimes.io/2026/09/28/blackrock-says-ai-agents-could-become-cryptos-next-demand-engine/",
-    "source_label": "cryptotimes.io",
-    "source_date": "Mon, 28 Sep 2026 07:37:00 GMT",
-    "evidence": "BlackRock Says AI Agents Could Become Crypto\u2019s Next Demand Engine BlackRock has laid out a case that the next major source of demand for stablecoins and blockchains",
-    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
-    "contacts": [
-      "Tom Press, CFA",
-      "Bob Scott, CFA"
     ],
     "status": "new",
     "firm_profile": {
