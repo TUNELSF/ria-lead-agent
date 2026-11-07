@@ -29,6 +29,34 @@
   },
   {
     "id": "2",
+    "firm": "ACT TWO INVESTORS LLC",
+    "priority": "high",
+    "signal_type": "crypto_signal",
+    "signal_category": "general",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.msn.com/pl-pl/finanse/technologia/investors-pulled-1-3-billion-from-bitcoin-and-ethereum-etfs-in-two-days-how-low-could-prices-go/ar-AA2gGfvQ",
+    "source_label": "msn.com",
+    "source_date": "Tue, 03 Nov 2026 10:39:19 GMT",
+    "evidence": "Investors pulled $1.3 billion from Bitcoin and Ethereum ETFs in two days. How low could prices go? Quick ReadInvestors pulled $1.3 billion from Bitcoin and Ethere",
+    "hook": "Saw the recent crypto-related signal \u2014 curious how you're thinking about digital asset access and implementation for clients.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "3",
     "firm": "MORGAN STANLEY",
     "priority": "high",
     "signal_type": "crypto_signal",
@@ -56,7 +84,7 @@
     }
   },
   {
-    "id": "3",
+    "id": "4",
     "firm": "NEW WAVE LOANS RESIDENTIAL, LLC",
     "priority": "high",
     "signal_type": "product_launch",
