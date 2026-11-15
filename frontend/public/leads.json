@@ -82,5 +82,33 @@
       "bd_affiliated": null,
       "independence": "unknown"
     }
+  },
+  {
+    "id": "4",
+    "firm": "NEW WAVE LOANS RESIDENTIAL, LLC",
+    "priority": "high",
+    "signal_type": "product_launch",
+    "signal_category": "offering",
+    "trigger": "Explicit crypto-related language found in recent media coverage",
+    "why_now": "This is recent, explicit crypto or digital-asset language tied to a specific media source.",
+    "source": "https://www.tennessean.com/press-release/story/213004/itrustcapital-announces-its-next-chapter-with-u-s-stocks-etfs-crypto-loans-and-ai-powered-quant-technology/",
+    "source_label": "tennessean.com",
+    "source_date": "Tue, 28 Jul 2026 10:58:00 GMT",
+    "evidence": "iTrustCapital Announces Its Next Chapter With U.S. Stocks, ETFs, Crypto Loans and AI-Powered Quant Technology The Expansion Will Add New Ways to Invest, Borrow Against Crypto, and Leverage AI",
+    "hook": "Saw the recent launch or product signal \u2014 curious how you're thinking about bringing digital-asset capabilities into the client offering.",
+    "contacts": [
+      "Chief Investment Officer",
+      "Managing Partner"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
   }
 ]
