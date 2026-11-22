@@ -29,6 +29,34 @@
   },
   {
     "id": "2",
+    "firm": "PLANTE MORAN REAL ESTATE INVESTMENT ADVISORS",
+    "priority": "medium",
+    "signal_type": "etf_activity",
+    "signal_category": "portfolio",
+    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
+    "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
+    "source": "https://cryptobriefing.com/plante-moran-bitcoin-etf-holdings-70-percent/",
+    "source_label": "cryptobriefing.com",
+    "source_date": "Thu, 05 Nov 2026 06:30:00 GMT",
+    "evidence": "Plante Moran Advisors boosts Bitcoin ETF holdings by 70% to $42M Plante Moran Advisors raised its spot Bitcoin ETF holdings 70% to $42 million in Q3, spread",
+    "hook": "Saw the recent ETF or portfolio activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
+    "contacts": [
+      "Zack Otte",
+      "Zach Brown"
+    ],
+    "status": "new",
+    "firm_profile": {
+      "aum": null,
+      "aum_bucket": "unknown",
+      "growth_1y": null,
+      "asset_focus": [],
+      "product_types": [],
+      "bd_affiliated": null,
+      "independence": "unknown"
+    }
+  },
+  {
+    "id": "3",
     "firm": "MORGAN STANLEY",
     "priority": "high",
     "signal_type": "crypto_signal",
