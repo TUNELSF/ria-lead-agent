@@ -29,34 +29,6 @@
   },
   {
     "id": "2",
-    "firm": "BETTER WAY LLC",
-    "priority": "medium",
-    "signal_type": "etf_activity",
-    "signal_category": "portfolio",
-    "trigger": "Portfolio activity involving crypto-related instruments detected in recent media",
-    "why_now": "This is a recent portfolio, ETF, demand, or adjacent alternatives signal that may indicate growing relevance of digital assets.",
-    "source": "https://www.msn.com/en-us/news/other/owning-crypto-directly-can-be-risky-in-kind-etf-conversions-are-a-better-way-to-own-it/ar-AA2i2dTE",
-    "source_label": "msn.com",
-    "source_date": "Mon, 23 Nov 2026 05:50:00 GMT",
-    "evidence": "Owning Crypto Directly Can Be Risky. In-Kind ETF Conversions Are a Better Way to Own It. In-kind crypto conversions provide investors",
-    "hook": "Saw the recent ETF or portfolio activity \u2014 curious whether digital assets are becoming more relevant in portfolio construction conversations.",
-    "contacts": [
-      "Chief Investment Officer",
-      "Managing Partner"
-    ],
-    "status": "new",
-    "firm_profile": {
-      "aum": null,
-      "aum_bucket": "unknown",
-      "growth_1y": null,
-      "asset_focus": [],
-      "product_types": [],
-      "bd_affiliated": null,
-      "independence": "unknown"
-    }
-  },
-  {
-    "id": "3",
     "firm": "MORGAN STANLEY",
     "priority": "high",
     "signal_type": "crypto_signal",
